@@ -1,0 +1,54 @@
+$sidePaddingNormal: 17.5%;
+$sidePaddingMobile: 1.4em;
+
+// TODO => Fix Box-Shadow: Read Joshua Cameau's Article on the subject
+
+.Nav {
+  display: flex;
+  background: #fff;
+  border-radius: 24px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 32px 8px rgba(255, 255, 255, 0.306);
+  position: relative;
+
+  width: 80%;
+  margin: 1rem auto;
+  padding: 0 1rem;
+
+  .logo {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navItems {
+    display: none;
+    text-decoration: none;
+    list-style-type: none;
+    background: orangered;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+  }
+
+  .burgerMenu {
+    width: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .item1,
+    .item2 {
+      width: 85%;
+      height: 2px;
+      background: #000;
+      margin-bottom: 4px;
+    }
+
+    .item3 {
+      width: 95%;
+      height: 2px;
+      background: #000;
+      border-radius: 100rem;
+    }
+  }
+}
