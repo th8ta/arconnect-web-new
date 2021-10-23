@@ -25,7 +25,7 @@ export default function Nav() {
   return (
     <nav className={styles.Nav}>
       <div className={styles.logo}>
-        <img src='/assets/logo.svg' alt="arconnect logo" />
+        <img src="/assets/logo.svg" alt="arconnect logo" />
         <p>ArConnect</p>
       </div>
       <ul className={styles.navItems}>
