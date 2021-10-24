@@ -1,6 +1,5 @@
 import Head from "next/head";
 import WelcomePage from "components/common/Welcome";
-import styles from "styles/components/chooseAction.module.scss";
 
 const ChooseAction = () => {
   return (
