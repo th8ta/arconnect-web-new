@@ -1,0 +1,32 @@
+.footerContainer {
+  color: #fff;
+  background: radial-gradient(
+    circle,
+    rgba(26, 0, 54, 1) 0%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+
+  ul {
+    list-style: none;
+    text-decoration: none;
+    width: 45%;
+    text-align: center;
+
+    h4 {
+      font-size: 20px;
+    }
+
+    li {
+      margin: 1.5rem 0;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+}
