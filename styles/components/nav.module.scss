@@ -38,11 +38,11 @@
     padding: 1rem;
     margin: 1rem 0;
 
-    flex-direction: column;
+    z-index: 99;
+    display: none;
     align-items: center;
     border-radius: 32px;
-    display: none;
-
+    flex-direction: column;
     background: linear-gradient(180deg, #000000 0%, #000000 100%);
 
     div {
