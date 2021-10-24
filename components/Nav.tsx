@@ -16,8 +16,6 @@ export default function Nav() {
     setBrowser(browser.name);
   }, []);
 
-  console.log(browser);
-
   return (
     <nav className={styles.Nav}>
       <div className={openNav ? styles.hide : styles.logo}>
