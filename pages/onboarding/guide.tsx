@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "styles/views/guide.module.scss";
+import styles from "styles/views/onboarding/guide.module.scss";
 
 const Guide = () => {
   return (
