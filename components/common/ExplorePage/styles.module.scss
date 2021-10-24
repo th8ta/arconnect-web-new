@@ -1,0 +1,38 @@
+.pageWrapper {
+  > div {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      text-align: center;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 64px;
+      order: 2;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  > p {
+    font-family: "Poppins";
+    font-weight: 300;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    line-height: 24px;
+
+    span {
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
