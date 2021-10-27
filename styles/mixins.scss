@@ -1,0 +1,31 @@
+@mixin Button($background, $color) {
+  color: $color;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-family: inherit;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  background: $background;
+}
+
+@mixin Font($size, $weight) {
+  font-family: "Poppins";
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin mobileNav {
+  width: 90%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  list-style-type: none;
+}
