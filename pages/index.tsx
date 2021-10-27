@@ -1,27 +1,14 @@
 import Head from "next/head";
-import { detect } from "detect-browser";
-import { useEffect, useState } from "react";
 
 import Metas from "components/Metas";
 import Footer from "components/Footer";
-import FAQ from "components/LandingPage/FAQ";
-import LandingPage from "components/LandingPage";
-import Features from "components/LandingPage/Features";
-import Community from "components/LandingPage/Community";
+import FAQ from "components/Home/FAQ";
+import Features from "components/Home/Features";
+import Community from "components/Home/Community";
+import LandingPage from "components/Home/LandingPage";
 import styles from "styles/views/home.module.scss";
 
 const Home = () => {
-  const [browser, setBrowser] = useState<string>();
-
-  useEffect(() => {
-    const browser = detect();
-
-    if (!browser) return;
-    // @ts-ignore
-    if (window.navigator.brave !== undefined) return setBrowser("Brave");
-    setBrowser(browser.name);
-  }, []);
-
   return (
     <>
       <Head>
