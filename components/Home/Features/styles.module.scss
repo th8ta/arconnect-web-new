@@ -1,0 +1,344 @@
+@import "/styles/mixins.scss";
+
+$white: #fff;
+$black: #000;
+
+@mixin FlexColumn() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin Button($borderColor) {
+  width: 90%;
+  opacity: 0.6;
+  color: $white;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  background: none;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid $borderColor;
+}
+
+.featureCards {
+  padding: 1rem;
+  margin: 2rem auto;
+
+  @include responsive(tablet) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @include responsive(desktop) {
+    padding: 0;
+    width: 70%;
+  }
+
+  @include responsive(desktop-large) {
+    width: 50%;
+  }
+}
+
+.features {
+  .textContainer {
+    height: 65rem;
+    position: relative;
+    background: radial-gradient(
+      circle,
+      rgb(12, 0, 24) 2%,
+      rgba(14, 0, 0, 1) 76%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    .textWrapper {
+      padding: 3rem 0.7rem;
+      display: flex;
+      flex-direction: column;
+
+      .buidl {
+        width: 6rem;
+        color: $black;
+        margin-top: 2rem;
+        text-align: center;
+        padding: 0.2rem 1rem;
+        background: #cdcdcd;
+        border-radius: 25.5px;
+      }
+
+      h3 {
+        color: $white;
+        margin: 1rem 0;
+        line-height: 60px;
+        @include FontSize(2.5rem, 3.625rem);
+
+        @include responsive(desktop) {
+          line-height: 80px;
+        }
+
+        span {
+          opacity: 0.5;
+        }
+      }
+
+      .text {
+        color: $white;
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+
+      .getStartedBtn{
+        @include Button($white);
+        @include Font(1rem, 400);
+
+        @include responsive(tablet) {
+          width: 70%;
+          font-weight: 700;
+        }
+
+        @media screen and (min-width: 1024px) {
+          width: 50%;
+        }
+      }
+    }
+
+    .codeSnippet {
+      color: #ffffff99;
+      padding: 2rem;
+      background: #000;
+
+      display: flex;
+      justify-content: center;
+
+      code {
+        font-size: 12px;
+        line-height: 32px;
+
+        .const {
+          display: inline;
+          color: #d75e77;
+        }
+
+        .config {
+          display: block;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(tablet) {
+    .textContainer {
+      width: 95%;
+      height: 45rem;
+      display: flex;
+      padding: 1rem;
+      margin: 0 auto;
+      border-radius: 3rem;
+
+      .textWrapper {
+        width: 50%;
+
+        .text {
+          width: 90%;
+        }
+      }
+
+      .codeSnippet {
+        padding: 2rem;
+        width: 50%;
+        height: 50%;
+        margin-left: 1rem;
+        align-self: center;
+        border-top-left-radius: 3.5rem;
+        border-top-right-radius: 3.5rem;
+      }
+    }
+  }
+
+  @include responsive(desktop) {
+    .textContainer {
+      width: 80%;
+
+      .codeSnippet {
+        width: 40%;
+
+        code {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(desktop-large) {
+    .textContainer {
+      width: 60%;
+      height: 48rem;
+    }
+  }
+}
+
+.securityContainer {
+  @include FlexColumn();
+  position: relative;
+  background: $white;
+  border-radius: 3rem;
+  display: flex;
+  top: -100px;
+
+  .securityInfo {
+    padding-top: 1rem;
+    padding-left: 0.6rem;
+    width: 95%;
+    margin: 0 auto;
+
+    .safu {
+      width: 5rem;
+      color: $white;
+      padding: 0.4rem;
+      margin-top: 3rem;
+      text-align: center;
+      background: #05aa5b;
+      border-radius: 25.5px;
+      @include Font(1rem, 400);
+    }
+
+    h3 {
+      @include FontSize(2.5rem, 3.625rem);
+
+      margin: 1rem 0;
+      line-height: 60px;
+    }
+
+    p {
+      font-weight: 300;
+      @include FontSize(1rem, 1rem);
+    }
+
+    .docsBtn {
+      display: none;
+    }
+  }
+
+  .shieldIcon {
+    background: #fff;
+    display: flex;
+    padding: 2.5rem;
+    margin: 2rem auto;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 64px 24px rgba(225, 225, 225, 0.25);
+  }
+
+  @include responsive(tablet) {
+    width: 90%;
+    margin: 0 auto;
+    top: -7.25rem;
+    padding-bottom: 2rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .securityInfo {
+      width: 45%;
+
+      h3 {
+        line-height: 70px;
+      }
+
+      .docsBtn {
+        display: block;
+        @include Font(1rem, 700);
+        @include Button(gray);
+        margin: 1.5rem 0;
+        color: #000;
+      }
+    }
+
+    .shieldIcon {
+      height: 50%;
+      width: auto;
+      padding: 3rem;
+      border-radius: 50%;
+      align-self: center;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  @include responsive(desktop) {
+    width: 75%;
+
+    .securityInfo {
+      .docsBtn {
+        width: 70%;
+      }
+    }
+  }
+
+  @include responsive(desktop-large) {
+    width: 55%;
+  }
+}
+
+.browserContainers {
+  @include FlexColumn();
+  height: 20rem;
+
+  p {
+    margin: 2rem 0;
+    opacity: 0.5;
+    text-align: center;
+    @include Font(24px, 400);
+  }
+
+  div {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      padding: 0.7rem;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0px 4px 32px 8px rgba(200, 200, 200, 0.25);
+    }
+  }
+
+  @include responsive(tablet) {
+    height: 12rem;
+
+    div {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  @include responsive(desktop) {
+    width: 70%;
+    margin: 0 auto;
+
+    div {
+      gap: 5rem;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  @include responsive(desktop-large) {
+    width: 50%;
+    height: 15rem;
+    margin: 0 auto;
+  }
+}
