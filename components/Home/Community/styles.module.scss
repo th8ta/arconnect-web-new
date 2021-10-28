@@ -1,0 +1,110 @@
+@import "/styles/mixins.scss";
+
+.cardWrapper {
+  width: 90%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  background: #fff;
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    .platform {
+      opacity: 0.6;
+      font-weight: 700;
+      margin-left: 0.8rem;
+      @include FontSize(1.25rem, 1.2rem);
+    }
+  }
+
+  > p {
+    font-weight: 300;
+    @include FontSize(1rem, 1rem);
+  }
+}
+
+.container {
+  .introSection {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 35px;
+    background: radial-gradient(
+      circle,
+      rgba(26, 0, 54, 1) 0%,
+      rgba(0, 0, 0, 1) 91%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 2.5rem;
+      @include FontSize(2.5rem, 3.625rem);
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .chatBtn {
+      width: 100%;
+      border: none;
+      padding: 0.9rem;
+      text-align: center;
+      color: #00000070;
+      background: #fff;
+      border-radius: 15px;
+      @include Font(1rem, 700);
+    }
+  }
+
+  @include responsive(tablet) {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+
+    .introSection {
+      width: 45%;
+      align-self: center;
+      padding: 2rem 1rem;
+
+      h2 {
+        line-height: 60px;
+      }
+    }
+
+    section {
+      width: 50%;
+    }
+  }
+
+  @include responsive(desktop) {
+    width: 80%;
+    margin: 2rem auto;
+
+    .introSection {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 10rem;
+
+      .chatBtn {
+        width: 50%;
+      }
+    }
+  }
+
+  @include responsive(desktop-large) {
+    width: 60%;
+  }
+}
