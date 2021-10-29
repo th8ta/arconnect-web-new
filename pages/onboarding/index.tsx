@@ -1,6 +1,5 @@
 import Head from "next/head";
-import WelcomePage from "components/common/Welcome";
-import styles from "styles/views/onboarding/welcome.module.scss";
+import WelcomePage from "components/Explore/Welcome";
 
 const Welcome = () => (
   <>

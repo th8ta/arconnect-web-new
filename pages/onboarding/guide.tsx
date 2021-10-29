@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import styles from "styles/views/onboarding/guide.module.scss";
 
 const Guide = () => {
@@ -11,25 +11,25 @@ const Guide = () => {
 
       <section className={styles.mainContainer}>
         <div className={styles.iconContainer}>
-          <Image
-            src="/assets/guide.svg"
-            alt="guide dog icon"
-            height={50}
-            width={50}
-          />
+          <img src="/assets/guide.svg" alt="guide dog icon" />
         </div>
-        <h1>No worries, We&apos;ll guide you</h1>
+        <h1>
+          No worries, <span>We&apos;ll guide you</span>
+        </h1>
         <p>
           We have curated a set of quick primers to bring you up to speed on
           crypto, But we understand that you probably need ArConnect for
           something immediately
         </p>
 
-        <div>
-          <button className={styles.buttonStyles}>
-            I want to learn about Crypto
-          </button>
-          <button className={styles.light}>I need ArConnect now</button>
+        <div className={styles.buttons}>
+          <Link href="/onboarding/explore">
+            <a className={styles.buttonStyles}>I want to learn about Crypto</a>
+          </Link>
+
+          <Link href="">
+            <a className={styles.dark}>I need ArConnect now</a>
+          </Link>
         </div>
       </section>
     </>

@@ -1,10 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import JustExplore from "components/Explore";
-import StoreAR from "components/Explore/StoreAR";
-import AccessDapps from "components/Explore/AccessDapps";
 import styles from "styles/views/onboarding/explore.module.scss";
+import { StoreAR, AccessDapps, JustExplore } from "components/Explore/";
 
 const Explore = () => {
   const [selected, setSelected] = useState({
