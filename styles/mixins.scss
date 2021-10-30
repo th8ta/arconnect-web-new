@@ -1,20 +1,52 @@
 @mixin Button($background, $color) {
-  color: $color;
   border: none;
   outline: none;
-  padding: 1rem;
+  color: $color;
+  text-align: center;
+  padding: 1rem 3rem;
+  cursor: pointer;
   font-weight: 700;
   font-size: 1.05rem;
-  font-family: inherit;
   margin-bottom: 1rem;
+  font-family: inherit;
   border-radius: 0.75rem;
   background: $background;
+
+  @media screen and (min-width: 48rem) {
+    min-width: 20rem;
+  }
+}
+
+@mixin security() {
+  .security {
+    width: auto;
+    text-align: center;
+  }
+
+  .security::after {
+    content: "coming soon";
+    color: #ffff;
+    text-align: end;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 5px;
+    border-radius: 8px;
+    position: absolute;
+    display: inline-block;
+    background: #05aa5b;
+  }
 }
 
 @mixin Font($size, $weight) {
   font-family: "Poppins";
   font-weight: $weight;
   font-size: $size;
+}
+
+@mixin FontSize($smallSize, $largeSize) {
+  font-family: "Poppins";
+  font-size: clamp($smallSize, 5vw, $largeSize);
 }
 
 @mixin mobileNav {
@@ -28,4 +60,62 @@
   margin: 0 auto;
   border-radius: 2rem;
   list-style-type: none;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (min-width: 45rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-small {
+    @media screen and (min-width: 64rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media screen and (min-width: 80rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-large {
+    @media screen and (min-width: 112.5rem) {
+      @content;
+    }
+  }
+}
+
+@mixin ExploreMenu($width) {
+  background: crimson;
+  width: $width;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1;
+  border-radius: 38px;
+  box-shadow: 0px 4px 32px 8px rgba(202, 202, 202, 0.25);
+
+  button {
+    color: #5a5a5a;
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0.2rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .active {
+    color: #000;
+    font-weight: 600;
+    background: #f2f2f2;
+    border-radius: 2rem;
+  }
 }
