@@ -34,19 +34,19 @@ const FeatureCard = ({
         {wallet ? (
           <div className={styles.icons}>
             <img
-              src={`${handIcon1}`}
+              src={handIcon1}
               alt="right hand icon"
               className={styles.icon1}
             />
             <img
-              src={`${handIcon2}`}
+              src={handIcon2}
               alt="left hand icon"
               className={styles.icon2}
             />
           </div>
         ) : (
           <img
-            src={`${iconUrl}`}
+            src={iconUrl}
             alt="gateway icon"
             className={styles.gatewayIcon}
           />

@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "styles/views/onboarding/guide.module.scss";
+
+import guidIcon from "@/public/assets/guide.svg";
 
 const Guide = () => {
   return (
@@ -11,7 +14,7 @@ const Guide = () => {
 
       <section className={styles.mainContainer}>
         <div className={styles.iconContainer}>
-          <img src="/assets/guide.svg" alt="guide dog icon" />
+          <Image src={guidIcon} alt="guide dog icon" />
         </div>
         <h1>
           No worries, <span>We&apos;ll guide you</span>
