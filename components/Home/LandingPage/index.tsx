@@ -28,15 +28,14 @@ const LandingPage = () => {
   }: {
     logoUrl: string;
     altText: string;
-    // eslint-disable-next-line @next/next/no-img-element
+    special?: boolean;
   }) => (
-    <div>
-      <img
-        className={styles.showcaseLogo}
-        src={logoUrl}
-        alt={altText}
-        />
-      </div>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      className={styles.showcaseLogo}
+      src={logoUrl}
+      alt={altText}
+    />
   );
 
   return (

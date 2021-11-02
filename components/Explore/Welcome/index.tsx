@@ -40,14 +40,14 @@ const WelcomeModal = ({
   linkTo: string;
 }) => {
   return (
-    <Link href={`${linkTo}`}>
-      <div className={styles.modalContainer}>
+    <Link href={linkTo}>
+      <a className={styles.modalContainer}>
         <div>
           <Image src={iconUrl} width={50.16} height={48.37} alt="emoji" />
           <p>{buttonText}</p>
         </div>
         <p>{paragraph}</p>
-      </div>
+      </a>
     </Link>
   );
 };

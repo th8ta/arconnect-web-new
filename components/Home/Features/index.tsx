@@ -4,6 +4,12 @@ import Link from "next/link";
 import FeatureCard from "./Card";
 import styles from "./styles.module.scss";
 
+import shieldIcon from "@/public/assets/shields.svg";
+import chromeIcon from "@/public/assets/chrome.svg";
+import firefoxIcon from "@/public/assets/firefox.svg";
+import edgeIcon from "@/public/assets/edge.svg";
+import braveIcon from "@/public/assets/brave.svg";
+
 const Features = () => {
   return (
     <>
@@ -81,7 +87,7 @@ const Features = () => {
           </div>
           <div className={styles.shieldIcon}>
             <Image
-              src="/assets/shields.svg"
+              src={shieldIcon}
               alt="shield icon"
               width={200}
               height={200}
@@ -93,12 +99,15 @@ const Features = () => {
       <section className={styles.browserContainers}>
         <p>Available on your favorite browsers</p>
         <div>
-          <div>
-            <img src="/assets/chrome.svg" alt="chrome" />
-          </div>
-          <img src="/assets/firefox.svg" alt="firefox" />
-          <img src="/assets/brave.svg" alt="brave" />
-          <img src="/assets/edge.svg" alt="edge" />
+          <Image width={43} height={43} src={chromeIcon} alt="chrome browser" />
+          <Image
+            width={43}
+            height={43}
+            src={firefoxIcon}
+            alt="firefox browser"
+          />
+          <Image width={43} height={43} src={edgeIcon} alt="edge browser" />
+          <Image width={43} height={43} src={braveIcon} alt="brave browser" />
         </div>
       </section>
     </>
