@@ -16,6 +16,7 @@ export default function Nav() {
     const browser = detect();
 
     if (!browser) return;
+    // @ts-ignore
     if (window.navigator.brave !== undefined) return setBrowser("brave");
     setBrowser(browser.name);
   }, []);
