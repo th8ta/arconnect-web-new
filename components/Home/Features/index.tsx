@@ -100,7 +100,12 @@ const Features = () => {
         <p>Available on your favorite browsers</p>
         <div>
           <Image width={43} height={43} src={chromeIcon} alt="chrome browser" />
-          <Image width={43} height={43} src={firefoxIcon} alt="firefox browser" />
+          <Image
+            width={43}
+            height={43}
+            src={firefoxIcon}
+            alt="firefox browser"
+          />
           <Image width={43} height={43} src={edgeIcon} alt="edge browser" />
           <Image width={43} height={43} src={braveIcon} alt="brave browser" />
         </div>
