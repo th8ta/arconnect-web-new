@@ -21,6 +21,8 @@
   .security {
     width: auto;
     text-align: center;
+    pointer-events: none;
+    color: rgba(128, 128, 128, 0.768);
   }
 
   .security::after {
@@ -34,7 +36,7 @@
     border-radius: 8px;
     position: absolute;
     display: inline-block;
-    background: #05aa5b;
+    background: #05aa5ad9;
   }
 }
 

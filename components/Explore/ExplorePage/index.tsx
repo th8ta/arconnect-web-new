@@ -58,7 +58,7 @@ const ExplorePage = ({
         />
 
         <ExploreModal
-          iconUrl="/assets/folder.svg"
+          iconUrl="/assets/mouse.svg"
           altText="folder emoji"
           modalHeader="(5.) Copy your address or Scan QR code"
           paragraph="Now click on the ‘copy’ icon to copy your wallet address or click on
@@ -67,7 +67,7 @@ const ExplorePage = ({
 
         {accessDapps ? (
           <ExploreModal
-            iconUrl="/assets/folder.svg"
+            iconUrl="/assets/plug.svg"
             altText="folder emoji"
             modalHeader="(6.) Visit the Dapp and click on ‘Connect Wallet’"
             paragraph="It’s super easy once your wallet is set up, visit the Dapp and click on the <strong>‘Connect wallet’</strong> button, follow the prompts and you should see a popup with a Log In form, your wallet address should already appear all you need to do is enter your ArConnect password. ArConnect also let’s you set an allowance limit to manage your tokens.  Finally Click <strong>Log In</strong> and that’s it!"
