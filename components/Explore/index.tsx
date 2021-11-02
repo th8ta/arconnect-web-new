@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,6 +16,14 @@ export const StoreAR = () => {
         browser if you haven’t already, If you have then let’s proceed! You
         basically just have to complete the following actions below step by step"
       />
+      <div className={styles.arConnect}>
+        <Image
+          src="/assets/arconnect-logo.svg"
+          width={174}
+          height={160}
+          alt="ArConnect Logo"
+        />
+      </div>
     </section>
   );
 };
@@ -36,6 +45,14 @@ export const AccessDapps = () => {
         
         Steps <strong>(1.)</strong> - <strong>(5.)</strong> walk you through setting up your wallet to receive AR, please skip if you already have AR in your wallet"
       />
+      <div className={styles.arConnect}>
+        <Image
+          src="/assets/arconnect-logo.svg"
+          width={174}
+          height={160}
+          alt="ArConnect Logo"
+        />
+      </div>
     </section>
   );
 };

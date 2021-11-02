@@ -10,6 +10,15 @@
   @include responsive(desktop-small) {
     width: 60%;
   }
+
+  .arConnect {
+    width: 8rem;
+    margin: 0 auto;
+
+    @include responsive(tablet) {
+      width: 11rem;
+    }
+  }
 }
 
 .mainContainer {
@@ -46,15 +55,6 @@
       text-align: center;
       margin-right: 1rem;
       @include FontSize(3.4rem, 3.75rem);
-    }
-
-    div { 
-      background: gold;
-      padding: 0.5rem;
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: 0px 4px 16px 4px rgba(197, 197, 197, 0.25);
-
     }
   }
 

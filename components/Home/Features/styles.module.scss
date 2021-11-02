@@ -46,8 +46,8 @@ $black: #000;
     position: relative;
     background: radial-gradient(
       circle,
-      rgb(12, 0, 24) 2%,
-      rgba(14, 0, 0, 1) 76%,
+      rgba(26, 0, 54, 1) 0%,
+      rgba(0, 0, 0, 1) 47%,
       rgba(0, 0, 0, 1) 100%
     );
 
@@ -222,10 +222,10 @@ $black: #000;
   }
 
   .shieldIcon {
-    background: #fff;
     display: flex;
     padding: 2.5rem;
     margin: 2rem auto;
+    background: #fff;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -310,10 +310,7 @@ $black: #000;
     img {
       width: 60px;
       height: 60px;
-      padding: 0.7rem;
-      background: #fff;
       border-radius: 50%;
-      box-shadow: 0px 4px 32px 8px rgba(200, 200, 200, 0.25);
     }
   }
 
@@ -322,8 +319,8 @@ $black: #000;
 
     div {
       img {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
       }
     }
   }
@@ -334,10 +331,6 @@ $black: #000;
 
     div {
       gap: 5rem;
-      img {
-        width: 90px;
-        height: 90px;
-      }
     }
   }
 

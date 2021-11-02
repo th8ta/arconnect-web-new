@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,8 +22,12 @@ const ChooseActionModal = ({
   return (
     <div className={styles.actionModal}>
       <p>{modalText}</p>
-      <div className={nerdFace ? styles.nerdFace : ""}>
-        <Image src={iconUrl} alt="emoji" width={204} height={155} />
+      <div
+        className={
+          !nerdFace ? styles.icons : `${styles.icons} ${styles.nerdface}`
+        }
+      >
+        <img src={iconUrl} alt="emoji" />
       </div>
     </div>
   );

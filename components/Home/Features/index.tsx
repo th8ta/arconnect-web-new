@@ -4,11 +4,11 @@ import Link from "next/link";
 import FeatureCard from "./Card";
 import styles from "./styles.module.scss";
 
-import shieldIcon from "@/public/assets/shields.svg";
-import chromeIcon from "@/public/assets/chrome.svg";
-import firefoxIcon from "@/public/assets/firefox.svg";
-import edgeIcon from "@/public/assets/edge.svg";
-import braveIcon from "@/public/assets/brave.svg";
+import shieldIcon from "public/assets/shield.svg";
+import chromeIcon from "public/assets/chrome.svg";
+import firefoxIcon from "public/assets/firefox.svg";
+import edgeIcon from "public/assets/edge.svg";
+import braveIcon from "public/assets/brave.svg";
 
 const Features = () => {
   return (
@@ -106,8 +106,8 @@ const Features = () => {
             src={firefoxIcon}
             alt="firefox browser"
           />
-          <Image width={43} height={43} src={edgeIcon} alt="edge browser" />
           <Image width={43} height={43} src={braveIcon} alt="brave browser" />
+          <Image width={43} height={43} src={edgeIcon} alt="edge browser" />
         </div>
       </section>
     </>

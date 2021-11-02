@@ -208,7 +208,7 @@
         width: 100%;
         text-align: center;
         grid-column-end: span 2;
-        @include Font(0.875rem, 300);
+        @include Font(1rem, 300);
       }
     }
 

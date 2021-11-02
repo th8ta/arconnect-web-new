@@ -12,7 +12,6 @@
 
 .pageWrapper {
   display: flex;
-  min-height: 55vh;
   flex-direction: column;
 
   @include responsive(desktop-large) {
@@ -118,19 +117,18 @@
     flex-wrap: wrap;
     margin: 1rem auto;
     justify-content: center;
-    
+
     div {
       display: flex;
       padding: 0.5rem;
       border-radius: 7.5rem;
       background: #fff;
-      
+
       img {
         width: auto;
         height: 18px;
       }
     }
-
 
     @include responsive(desktop-small) {
       div {
@@ -143,7 +141,7 @@
     @include responsive(desktop-large) {
       div {
         img {
-          height: 30px;
+          height: 22px;
         }
       }
     }

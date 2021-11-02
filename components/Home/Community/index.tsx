@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./styles.module.scss";
 
 const Community = () => {
@@ -14,10 +14,10 @@ const Community = () => {
     text: string;
     linkTo: string;
   }) => (
-    <Link href={`${linkTo}`}>
+    <Link href={linkTo}>
       <a target="_blank" className={styles.cardWrapper}>
         <div>
-          <Image src={platformIcon} alt={platform} width={25} height={25} />
+          <img src={platformIcon} alt={platform} />
           <p className={styles.platform}>{platform}</p>
         </div>
         <p>{text}</p>
