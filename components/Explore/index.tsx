@@ -4,8 +4,6 @@ import Image from "next/image";
 import ExplorePage from "./ExplorePage";
 import styles from "./styles.module.scss";
 
-import nerdFace from "@/public/assets/nerdFace.svg";
-
 export const StoreAR = () => {
   return (
     <section className={styles.dappsContainer}>
@@ -49,8 +47,10 @@ export const JustExplore = () => {
         <h1>I just want to explore </h1>
         <div>
           <Image
-            src={nerdFace}
+            src="/assets/nerdFace.svg"
             alt="ArConnect Logo"
+            height={42}
+            width={42}
             className={styles.nerdFace}
           />
         </div>

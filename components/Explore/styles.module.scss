@@ -44,15 +44,17 @@
       font-weight: 800;
       line-height: 64px;
       text-align: center;
+      margin-right: 1rem;
       @include FontSize(3.4rem, 3.75rem);
     }
 
-    .nerdFace {
+    div { 
+      background: gold;
       padding: 0.5rem;
-      margin-left: 1rem;
       background: #fff;
       border-radius: 50%;
       box-shadow: 0px 4px 16px 4px rgba(197, 197, 197, 0.25);
+
     }
   }
 
