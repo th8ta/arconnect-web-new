@@ -20,7 +20,7 @@ const Community = () => {
           <Image src={platformIcon} alt={platform} width={25} height={25} />
           <p className={styles.platform}>{platform}</p>
         </div>
-        <p>{text}</p> 
+        <p>{text}</p>
       </a>
     </Link>
   );
