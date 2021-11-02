@@ -2,6 +2,7 @@
 @import "/styles/partials/mobileNav.module.scss";
 
 .Nav {
+  z-index: 1;
   width: 90%;
   height: 5rem;
   margin: 2rem auto;
@@ -18,7 +19,6 @@
     width: 70%;
   }
 
-  z-index: 1;
 
   .navItems {
     display: none;
@@ -32,7 +32,7 @@
 
     p {
       font-family: "Inter";
-      font-weight: 300;
+      font-weight: 500;
       line-height: 17px;
       font-size: 1.125rem;
       margin-left: 0.5rem;
@@ -41,8 +41,9 @@
 
   .burgerMenu,
   .closeMenu {
-    margin-right: 1rem;
+    display: flex;
     cursor: pointer;
+    margin-right: 1.5rem;
   }
 
   .addToBrowsers {
@@ -52,12 +53,6 @@
   @include responsive(tablet) {
     .burgerMenu {
       display: none;
-    }
-
-    .logo {
-      p {
-        font-weight: 500;
-      }
     }
 
     .navItems {
