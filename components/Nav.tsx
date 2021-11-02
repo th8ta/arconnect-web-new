@@ -5,6 +5,8 @@ import { detect } from "detect-browser";
 import { useEffect, useState } from "react";
 import { GrClose } from "react-icons/gr";
 
+import Logo from 'assets/logo.svg';
+
 import styles from "styles/components/nav.module.scss";
 
 export default function Nav() {
@@ -53,7 +55,7 @@ export default function Nav() {
       <nav className={styles.Nav}>
         <div className={styles.logo}>
           <Image
-            src="/assets/logo.svg"
+            src="/assets/arconnect-logo.svg"
             alt="arconnect logo"
             width={30}
             height={30}
@@ -67,15 +69,15 @@ export default function Nav() {
 
         {openNav ? (
           <div onClick={() => setOpenNav(false)} className={styles.closeMenu}>
-            <GrClose size="1.8rem" />
+            <GrClose size="1.5rem" />
           </div>
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>
             <Image
               src="/assets/navBurgerMenu.svg"
               alt="arconnect logo"
-              width={30}
-              height={30}
+              width={24.1}
+              height={16}
             />
           </div>
         )}

@@ -14,14 +14,14 @@
   display: flex;
   min-height: 55vh;
   flex-direction: column;
-  justify-content: space-evenly;
 
-  @include responsive(desktop) {
-    min-height: 80vh;
+  @include responsive(desktop-large) {
+    height: 85vh;
+    justify-content: space-evenly;
   }
 
   .landingIntro {
-    width: 85%;
+    padding: 1rem;
     margin: 0rem auto;
 
     h1 {
@@ -32,11 +32,11 @@
 
       @media screen and (min-width: 321px) {
         line-height: 4.125rem;
-        @include FontSize(3.2rem, 6rem);
+        @include FontSize(3.5rem, 6rem);
       }
 
       @media screen and (min-width: 361px) {
-        @include FontSize(3.5rem, 6rem);
+        @include FontSize(3.7rem, 6rem);
       }
 
       @include responsive(desktop) {
@@ -49,7 +49,8 @@
     }
 
     p {
-      padding: 0.8rem;
+      padding: 0.5rem;
+      margin: 1.5rem 0;
       text-align: center;
       @include FontSize(1rem, 1rem);
 
@@ -113,37 +114,38 @@
 
   .showcase {
     display: flex;
-    gap: 0.2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     margin: 1rem auto;
     justify-content: center;
-
-    img {
-      margin: 3px;
+    
+    div {
+      display: flex;
       padding: 0.5rem;
-      background: #fff;
       border-radius: 7.5rem;
-    }
-
-    @include responsive(tablet) {
-      gap: 1rem;
-
+      background: #fff;
+      
       img {
-        width: 110px;
-        height: 45px;
+        width: auto;
+        height: 18px;
       }
     }
 
-    @include responsive(desktop) {
-      img {
-        width: 140px;
-        height: 45px;
+
+    @include responsive(desktop-small) {
+      div {
+        img {
+          height: 20px;
+        }
       }
     }
-  }
 
-  .special {
-    width: 45px !important;
-    height: 45px !important;
+    @include responsive(desktop-large) {
+      div {
+        img {
+          height: 30px;
+        }
+      }
+    }
   }
 }

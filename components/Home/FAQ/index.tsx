@@ -54,7 +54,9 @@ const FeedbackCard = ({
   );
   return (
     <div className={styles.userFeedback}>
-      <Image src={picUrl} alt="rating icon" width={15} height={15} />
+      <div className={styles.userDP}>
+        <Image src={picUrl} alt="rating icon" width={15} height={15} />
+      </div>
       <div className={styles.userInfo}>
         <p>{name}</p>
         <div>

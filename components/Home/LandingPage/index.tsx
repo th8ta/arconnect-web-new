@@ -25,22 +25,18 @@ const LandingPage = () => {
   const Showcase = ({
     logoUrl,
     altText,
-    special
   }: {
     logoUrl: string;
     altText: string;
-    special?: boolean;
     // eslint-disable-next-line @next/next/no-img-element
   }) => (
-    <img
-      className={
-        special
-          ? `${styles.showcaseLogo} ${styles.special}`
-          : styles.showcaseLogo
-      }
-      src={logoUrl}
-      alt={altText}
-    />
+    <div>
+      <img
+        className={styles.showcaseLogo}
+        src={logoUrl}
+        alt={altText}
+        />
+      </div>
   );
 
   return (
@@ -65,15 +61,15 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <p className={styles.supportText}>Supported by Web 3.0 Trailblazers</p>
+    <p className={styles.supportText}>Supported by Web 3.0 Trailblazers</p>
 
-      <section className={styles.showcase}>
-        <Showcase logoUrl="/assets/pianity.svg" altText="Pianity" />
-        <Showcase logoUrl="/assets/arweave.svg" altText="Arweave" />
-        <Showcase logoUrl="/assets/arverify.svg" altText="Arverify" />
-        <Showcase logoUrl="/assets/community.svg" altText="Community" />
-        <Showcase logoUrl="/assets/verto.svg" altText="Verto" special />
-        <Showcase logoUrl="/assets/kyve.svg" altText="Kyve" special />
+        <section className={styles.showcase}>
+          <Showcase logoUrl="/assets/pianity.svg" altText="Pianity" />
+          <Showcase logoUrl="/assets/arweave.svg" altText="Arweave" />
+          <Showcase logoUrl="/assets/arverify.svg" altText="Arverify" />
+          <Showcase logoUrl="/assets/community.svg" altText="Community" />
+          <Showcase logoUrl="/assets/verto.svg" altText="Verto" />
+          <Showcase logoUrl="/assets/kyve.svg" altText="Kyve" />
       </section>
     </section>
   );

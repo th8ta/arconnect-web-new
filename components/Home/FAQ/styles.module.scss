@@ -186,8 +186,16 @@
       box-shadow: 0px 4px 32px 8px rgba(231, 231, 231, 0.25);
 
       display: grid;
-      grid-template-rows: 20% 80%;
-      grid-template-columns: 20% 80%;
+      grid-template-rows: auto 80%;
+      grid-template-columns: 15% 80%;
+
+      .userDP {
+        img {
+          width: 44px;
+          height: 44px;
+        }
+        align-self: center;
+      }
 
       .userInfo {
         margin-left: 0.5rem;
@@ -198,7 +206,6 @@
 
       .feedback {
         width: 100%;
-        margin-top: 1rem;
         text-align: center;
         grid-column-end: span 2;
         @include Font(0.875rem, 300);

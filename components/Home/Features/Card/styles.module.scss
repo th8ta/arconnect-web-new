@@ -56,8 +56,8 @@ $margin: 2rem 0;
     width: 100%;
 
     .gatewayIcon {
-      width: 85%;
-      height: 13.75rem;
+      width: auto;
+      height: 10rem;
       display: flex;
       margin: 0 auto;
 
@@ -72,14 +72,46 @@ $margin: 2rem 0;
       justify-content: center;
 
       .icon1 {
-        width: 50%;
-        height: 12.5rem;
+        width: auto;
+        height: 10rem;
       }
 
       .icon2 {
-        width: 30%;
-        height: 6.25rem;
+        width: auto;
+        height: 5rem;
         align-self: center;
+      }
+    }
+
+    @include responsive(tablet) {
+      .gatewayIcon {
+        height: 14rem;
+      }
+  
+      .icons {  
+        .icon1 {
+          height: 12rem;
+        }
+  
+        .icon2 {
+          height: 6rem;
+        }
+      }
+    }
+
+    @include responsive(desktop-small) {
+      .gatewayIcon {
+        height: 16rem;
+      }
+  
+      .icons {  
+        .icon1 {
+          height: 15rem;
+        }
+  
+        .icon2 {
+          height: 9rem;
+        }
       }
     }
   }
