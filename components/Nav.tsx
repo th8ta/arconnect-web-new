@@ -1,59 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { detect } from "detect-browser";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GrClose } from "react-icons/gr";
 
-import Logo from 'assets/logo.svg';
-
+import useGetBrowser from "hooks/useGetBrowser";
 import styles from "styles/components/nav.module.scss";
+
+const NavItems = () => (
+  <>
+    <li>
+      <Link href="/">Home</Link>
+    </li>
+    <li>
+      <Link href="https://docs.th8ta.org/">Docs</Link>
+    </li>
+    <li className={styles.security}>
+      <Link href="/security">Security</Link>
+    </li>
+  </>
+);
 
 export default function Nav() {
   const router = useRouter();
-  const [browser, setBrowser] = useState<string>();
   const [openNav, setOpenNav] = useState<boolean>(false);
-
-  useEffect(() => {
-    const browser = detect();
-
-    if (!browser) return;
-    // @ts-ignore
-    if (window.navigator.brave !== undefined) return setBrowser("brave");
-    setBrowser(browser.name);
-  }, []);
-
-  const linkToStore = (browser: string | undefined): string => {
-    switch (browser) {
-      case "firefox":
-        return "https://addons.mozilla.org/en-US/firefox/addon/arconnect/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search";
-        break;
-      case "brave":
-        return "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap";
-        break;
-      default:
-        return "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap";
-    }
-  };
-
-  const NavItems = () => (
-    <>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/docs">Docs</Link>
-      </li>
-      <li className={styles.security}>
-        <Link href="/security">Security</Link>
-      </li>
-    </>
-  );
+  const { browser, browserLink: storeLink } = useGetBrowser();
 
   return (
     <>
       <nav className={styles.Nav}>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={() => router.push("/")}>
           <Image
             src="/assets/arconnect-logo.svg"
             alt="arconnect logo"
@@ -82,22 +58,20 @@ export default function Nav() {
           </div>
         )}
 
-        <div
-          className={
-            router.pathname === "/" ? styles.addToBrowsers : styles.install
-          }
-          onClick={() => linkToStore(browser)}
-        >
-          {router.pathname === "/" ? (
-            <Link href={linkToStore(browser)}>
-              <a target="_blank">{`Add to ${browser}`}</a>
-            </Link>
-          ) : (
-            <Link href={linkToStore(browser)}>
-              <a target="_blank">Install ArConnect</a>
-            </Link>
-          )}
-        </div>
+        {router.pathname === "/" ? (
+          <Link href={storeLink}>
+            <a
+              className={styles.addToBrowsers}
+              target="_blank"
+            >{`Add to ${browser}`}</a>
+          </Link>
+        ) : (
+          <Link href={storeLink}>
+            <a className={styles.addToBrowsers} target="_blank">
+              Install ArConnect
+            </a>
+          </Link>
+        )}
       </nav>
 
       <div className={styles.mobileNav}>
