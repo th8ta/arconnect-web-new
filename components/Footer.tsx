@@ -8,7 +8,7 @@ const Footer = () => {
         <ul>
           <h4>Resources</h4>
           <li>
-            <Link href="/docs">Documentation</Link>
+            <Link href="https://docs.th8ta.org/">Docs</Link>
           </li>
           <li>
             <Link href="/">FAQ</Link>

@@ -43,7 +43,6 @@ $background: linear-gradient(180deg, #000000 0%, #000000 100%);
 
   .closeNav {
     @include mobileNav;
-
     margin: 0 auto;
     animation: closeMenu 400ms;
     animation-fill-mode: forwards;
