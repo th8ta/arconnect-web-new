@@ -12,6 +12,11 @@
   border-radius: 0.75rem;
   background: $background;
 
+  &:hover {
+    transform: scale(1.04);
+    transition: all 400ms ease;
+  }
+
   @media screen and (min-width: 48rem) {
     min-width: 20rem;
   }
@@ -120,4 +125,8 @@
     background: #f2f2f2;
     border-radius: 2rem;
   }
+}
+
+@mixin ButtonHover {
+  transform: scale(0.1);
 }

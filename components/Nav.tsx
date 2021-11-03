@@ -67,7 +67,7 @@ export default function Nav() {
           </Link>
         ) : (
           <Link href={storeLink}>
-            <a className={styles.addToBrowsers} target="_blank">
+            <a className={styles.install} target="_blank">
               Install ArConnect
             </a>
           </Link>

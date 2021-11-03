@@ -46,8 +46,7 @@
     margin-right: 1.5rem;
   }
 
-  .addToBrowsers,
-  .install {
+  .addToBrowsers {
     display: none;
   }
 
@@ -66,6 +65,10 @@
       li {
         cursor: pointer;
         @include Font(1rem, 300);
+
+        &:hover {
+          font-weight: 400;
+        }
       }
     }
 
@@ -91,12 +94,26 @@
     .addToBrowsers {
       @extend .buttonStyles;
       background: none;
+
+      &:hover {
+        color: #fff;
+        border: none;
+        background: #000;
+        transition: all 400ms ease-in-out;
+      }
     }
 
     .install {
       @extend .buttonStyles;
       color: #fff;
       background: #000;
+
+      &:hover {
+        color: #000;
+        background: #fff;
+        border: 1.5px solid #000;
+        transition: all 400ms ease-in-out;
+      }
     }
   }
 }
