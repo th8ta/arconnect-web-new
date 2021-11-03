@@ -11,10 +11,14 @@
   font-family: inherit;
   border-radius: 0.75rem;
   background: $background;
+  transition: all 400ms ease;
 
   &:hover {
     transform: scale(1.04);
-    transition: all 400ms ease;
+  }
+
+  &:active {
+    transform: scale(.97);
   }
 
   @media screen and (min-width: 48rem) {

@@ -1,5 +1,6 @@
 import { detect } from "detect-browser";
 import { useEffect, useState } from "react";
+
 const useGetBrowser = () => {
   const [browser, setBrowser] = useState<string>();
 

@@ -107,13 +107,13 @@
     font-size: 1.125rem;
     border-radius: 1rem;
     background: #000;
+    transition: all 400ms ease-in-out;
 
     &:hover {
       color: #000;
       background: none;
       transform: scale(1.02);
       border: 1.5px solid #000;
-      transition: all 400ms ease-in-out;
     }
 
     @include responsive(desktop) {

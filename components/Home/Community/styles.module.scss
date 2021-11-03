@@ -9,10 +9,10 @@
   margin: 1rem auto;
   border-radius: 2rem;
   background: #fff;
+  transition: all 400ms ease;
 
   &:hover {
     transform: scale(1.04);
-    transition: all 400ms ease;
   }
 
   div {
@@ -76,12 +76,12 @@
       background: #fff;
       border-radius: 15px;
       @include Font(1rem, 700);
+      transition: all 400ms ease;
 
       &:hover {
         color: #fff;
         background: none;
         border: 1.5px solid #fff;
-        transition: all 400ms ease;
       }
     }
   }
