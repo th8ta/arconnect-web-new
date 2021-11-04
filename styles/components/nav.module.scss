@@ -62,11 +62,11 @@
       li {
         cursor: pointer;
         @include Font(1rem, 400);
-        opacity: .63;
+        opacity: 0.63;
         transition: all 400ms ease-in-out;
 
         &:hover {
-          opacity: .87;
+          opacity: 0.87;
         }
       }
     }
