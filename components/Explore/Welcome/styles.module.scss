@@ -29,10 +29,13 @@
     background: #fff;
     border-radius: 54px;
     transition: all 400ms ease-in-out;
-    box-shadow: 0px 4px 32px 8px rgba(202, 202, 202, 0.25);
 
     &:hover {
       transform: scale(1.04);
+    }
+
+    &:active {
+      transform: scale(0.97);
     }
 
     > div {
@@ -86,22 +89,11 @@
   cursor: pointer;
   margin: 2rem auto;
   background: #fff;
-  border-radius: 54px;
-
-  height: 17rem;
   @include DisplayFlex(column, center, center);
   transition: all 400ms ease-in-out;
 
-  &:hover {
-    transform: scale(1.04);
-  }
-
-  p {
-    width: 80%;
-    padding: 1rem;
-    font-size: 22px;
-    font-weight: 700;
-    background: #fff;
+  &:active {
+    transform: scale(0.97);
     text-align: center;
     border-radius: 64px;
   }

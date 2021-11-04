@@ -61,10 +61,12 @@
 
       li {
         cursor: pointer;
-        @include Font(1rem, 300);
+        @include Font(1rem, 400);
+        opacity: .63;
+        transition: all 400ms ease-in-out;
 
         &:hover {
-          font-weight: 400;
+          opacity: .87;
         }
       }
     }
@@ -88,6 +90,7 @@
       border: 1px solid #000;
       @include Font(14px, 700);
       text-transform: capitalize;
+      transition: all 400ms ease-in-out;
     }
     .addToBrowsers {
       @extend .buttonStyles;
@@ -96,7 +99,6 @@
 
       &:hover {
         color: #fff;
-        border: none;
         background: #000;
       }
     }
