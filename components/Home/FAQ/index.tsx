@@ -1,13 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import styles from './styles.module.scss';
-
-const variants = {
-  open: { x: '100px' },
-  closed: { x: '-100px' }
-};
 
 const QandA = ({
   question,
