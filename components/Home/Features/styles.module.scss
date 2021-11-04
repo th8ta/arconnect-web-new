@@ -1,4 +1,4 @@
-@import "/styles/mixins.scss";
+@import '/styles/mixins.scss';
 
 $white: #fff;
 $black: #000;
@@ -30,8 +30,7 @@ $black: #000;
   margin: 2rem auto;
 
   @include responsive(tablet) {
-    display: flex;
-    justify-content: space-evenly;
+    @include DisplayFlex(row, none, space-evenly);
   }
 
   @include responsive(desktop) {
@@ -57,8 +56,7 @@ $black: #000;
 
     .textWrapper {
       padding: 3rem 0.7rem;
-      display: flex;
-      flex-direction: column;
+      @include DisplayFlex(column, none, none);
 
       .buidl {
         width: 6rem;
@@ -111,9 +109,7 @@ $black: #000;
       color: #ffffff99;
       padding: 2rem;
       background: #000;
-
-      display: flex;
-      justify-content: center;
+      @include DisplayFlex(row, none, center);
 
       code {
         font-size: 12px;
@@ -226,13 +222,11 @@ $black: #000;
   }
 
   .shieldIcon {
-    display: flex;
+    @include DisplayFlex(row, center, center);
     padding: 2.5rem;
     margin: 2rem auto;
     background: #fff;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0px 4px 64px 24px rgba(225, 225, 225, 0.25);
 
     img {
@@ -246,8 +240,7 @@ $black: #000;
     margin: 0 auto;
     top: -7.25rem;
     padding-bottom: 2rem;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include DisplayFlex(row, none, space-evenly);
 
     .securityInfo {
       width: 45%;
@@ -306,16 +299,9 @@ $black: #000;
   }
 
   div {
-    display: flex;
+    @include DisplayFlex(row, none, center);
     gap: 2rem;
     flex-wrap: wrap;
-    justify-content: center;
-
-    img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-    }
   }
 
   @include responsive(tablet) {

@@ -1,11 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { GrClose } from "react-icons/gr";
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import Button from 'components/Button';
+import { useRouter } from 'next/router';
+import { GrClose } from 'react-icons/gr';
 
-import useGetBrowser from "hooks/useGetBrowser";
-import styles from "styles/components/nav.module.scss";
+import useGetBrowser from 'hooks/useGetBrowser';
+import styles from 'styles/components/nav.module.scss';
 
 const NavItems = () => (
   <>
@@ -29,7 +30,7 @@ export default function Nav() {
   return (
     <>
       <nav className={styles.Nav}>
-        <div className={styles.logo} onClick={() => router.push("/")}>
+        <div className={styles.logo} onClick={() => router.push('/')}>
           <Image
             src="/assets/arconnect-logo.svg"
             alt="arconnect logo"
@@ -58,7 +59,7 @@ export default function Nav() {
           </div>
         )}
 
-        {router.pathname === "/" ? (
+        {router.pathname === '/' ? (
           <Link href={storeLink}>
             <a
               className={styles.addToBrowsers}

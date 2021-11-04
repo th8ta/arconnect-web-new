@@ -11,10 +11,10 @@
   font-family: inherit;
   border-radius: 0.75rem;
   background: $background;
+  transition: all 400ms ease;
 
   &:hover {
     transform: scale(1.04);
-    transition: all 400ms ease;
   }
 
   @media screen and (min-width: 48rem) {
@@ -31,7 +31,7 @@
   }
 
   .security::after {
-    content: "coming soon";
+    content: 'coming soon';
     color: #ffff;
     text-align: end;
     padding: 2px 8px;
@@ -46,13 +46,13 @@
 }
 
 @mixin Font($size, $weight) {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: $weight;
   font-size: $size;
 }
 
 @mixin FontSize($smallSize, $largeSize) {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-size: clamp($smallSize, 5vw, $largeSize);
 }
 
@@ -127,6 +127,9 @@
   }
 }
 
-@mixin ButtonHover {
-  transform: scale(0.1);
+@mixin DisplayFlex($direction, $alignment, $justify) {
+  display: flex;
+  align-items: $alignment;
+  justify-content: $justify;
+  flex-direction: $direction;
 }

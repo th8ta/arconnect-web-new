@@ -1,5 +1,5 @@
-import { detect } from "detect-browser";
-import { useEffect, useState } from "react";
+import { detect } from 'detect-browser';
+import { useEffect, useState } from 'react';
 const useGetBrowser = () => {
   const [browser, setBrowser] = useState<string>();
 
@@ -8,20 +8,20 @@ const useGetBrowser = () => {
 
     if (!browser) return;
     // @ts-ignore
-    if (window.navigator.brave !== undefined) return setBrowser("brave");
+    if (window.navigator.brave !== undefined) return setBrowser('brave');
     setBrowser(browser.name);
   }, []);
 
   const linkToStore = (browser: string | undefined): string => {
     switch (browser) {
-      case "firefox":
-        return "https://addons.mozilla.org/en-US/firefox/addon/arconnect/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search";
+      case 'firefox':
+        return 'https://addons.mozilla.org/en-US/firefox/addon/arconnect/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search';
         break;
-      case "brave":
-        return "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap";
+      case 'brave':
+        return 'https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap';
         break;
       default:
-        return "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap";
+        return 'https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap';
     }
   };
 

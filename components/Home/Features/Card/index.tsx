@@ -1,5 +1,6 @@
-import Image from "next/image";
-import styles from "./styles.module.scss";
+/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+import styles from './styles.module.scss';
 
 interface Props {
   title: string;

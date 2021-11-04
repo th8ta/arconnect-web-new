@@ -1,12 +1,11 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import Metas from "components/Metas";
-import Footer from "components/Footer";
-import FAQ from "components/Home/FAQ";
-import Features from "components/Home/Features";
-import Community from "components/Home/Community";
-import LandingPage from "components/Home/LandingPage";
-import styles from "styles/views/home.module.scss";
+import Metas from 'components/Metas';
+import Footer from 'components/Footer';
+import FAQ from 'components/Home/FAQ';
+import Features from 'components/Home/Features';
+import Community from 'components/Home/Community';
+import LandingPage from 'components/Home/LandingPage';
 
 const Home = () => {
   return (
@@ -20,7 +19,7 @@ const Home = () => {
         description="Secure wallet management for Arweave"
         image="/logo256.png"
       />
-      <main className={styles.container}>
+      <main>
         <LandingPage />
         <Features />
         <FAQ />

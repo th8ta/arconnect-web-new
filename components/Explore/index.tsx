@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import ExplorePage from "./ExplorePage";
-import styles from "./styles.module.scss";
+import ExplorePage from './ExplorePage';
+import styles from './styles.module.scss';
 
 export const StoreAR = () => {
   return (
@@ -62,15 +62,11 @@ export const JustExplore = () => {
     <main className={styles.mainContainer}>
       <div className={styles.headerContainer}>
         <h1>I just want to explore </h1>
-        <div>
-          <Image
-            src="/assets/nerdFace.svg"
-            alt="ArConnect Logo"
-            height={42}
-            width={42}
-            className={styles.nerdFace}
-          />
-        </div>
+        <img
+          src="/assets/nerdFace.svg"
+          alt="NerdFace"
+          className={styles.nerdFace}
+        />
       </div>
       <p>
         And that’s fine, ArConnect makes the Arweave experience delightful, If

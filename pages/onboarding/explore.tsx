@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useState } from "react";
-import styles from "styles/views/onboarding/explore.module.scss";
-import { StoreAR, AccessDapps, JustExplore } from "components/Explore/";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from 'styles/views/onboarding/explore.module.scss';
+import { StoreAR, AccessDapps, JustExplore } from 'components/Explore/';
 
 const Explore = () => {
   const [selected, setSelected] = useState({
@@ -15,10 +15,10 @@ const Explore = () => {
 
   const Dropdown = () => {
     const dropDownText = selected.storeTokens
-      ? "Store your first AR tokens"
+      ? 'Store your first AR tokens'
       : selected.accessDapp
-      ? "Access a Dapp"
-      : "I just want to explore";
+      ? 'Access a Dapp'
+      : 'I just want to explore';
 
     return (
       <section className={styles.dropDown}>
@@ -49,7 +49,7 @@ const Explore = () => {
               });
               setOpenDropdown(false);
             }}
-            className={selected.storeTokens ? styles.active : ""}
+            className={selected.storeTokens ? styles.active : ''}
           >
             Store your first AR tokens
           </button>
@@ -63,7 +63,7 @@ const Explore = () => {
               });
               setOpenDropdown(false);
             }}
-            className={selected.accessDapp ? styles.active : ""}
+            className={selected.accessDapp ? styles.active : ''}
           >
             Access a Dapp
           </button>
@@ -77,7 +77,7 @@ const Explore = () => {
               });
               setOpenDropdown(false);
             }}
-            className={selected.explore ? styles.active : ""}
+            className={selected.explore ? styles.active : ''}
           >
             I just want to Explore
           </button>

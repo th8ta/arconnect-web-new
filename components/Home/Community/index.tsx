@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import styles from "./styles.module.scss";
+import Link from 'next/link';
+import styles from './styles.module.scss';
 
 const Community = () => {
   const Card = ({

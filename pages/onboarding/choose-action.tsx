@@ -1,5 +1,5 @@
-import Head from "next/head";
-import WelcomePage from "components/Explore/Welcome";
+import Head from 'next/head';
+import WelcomePage from 'components/Explore/Welcome';
 
 const ChooseAction = () => {
   return (

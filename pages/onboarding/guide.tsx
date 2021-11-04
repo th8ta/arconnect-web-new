@@ -1,11 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "styles/views/onboarding/guide.module.scss";
-
-import guidIcon from "@/public/assets/guide.svg";
+/* eslint-disable @next/next/no-img-element */
+import Head from 'next/head';
+import Button from 'components/Button';
+import useGetBrowser from 'hooks/useGetBrowser';
+import styles from 'styles/views/onboarding/guide.module.scss';
 
 const Guide = () => {
+  const { browserLink } = useGetBrowser();
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ const Guide = () => {
 
       <section className={styles.mainContainer}>
         <div className={styles.iconContainer}>
-          <Image src={guidIcon} alt="guide dog icon" />
+          <img src="/assets/guide.svg" alt="guide dog icon" />
         </div>
         <h1>
           No worries, <span>We&apos;ll guide you</span>
@@ -26,13 +26,12 @@ const Guide = () => {
         </p>
 
         <div className={styles.buttons}>
-          <Link href="/onboarding/explore">
-            <a className={styles.buttonStyles}>I want to learn about Crypto</a>
-          </Link>
+          <Button
+            href="/onboarding/explore"
+            text="I want to learn about Crypto"
+          />
 
-          <Link href="">
-            <a className={styles.dark}>I need ArConnect now</a>
-          </Link>
+          <Button href={browserLink} text="I need ArConnect now" dark newTab />
         </div>
       </section>
     </>

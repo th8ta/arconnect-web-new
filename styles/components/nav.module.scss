@@ -1,6 +1,6 @@
-@import "/styles/mixins.scss";
-@import "/styles/partials/mobileNav.module.scss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import '/styles/mixins.scss';
+@import '/styles/partials/mobileNav.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 .Nav {
   z-index: 1;
@@ -9,11 +9,9 @@
   margin: 2rem auto;
   position: relative;
 
-  display: flex;
   background: #fff;
   border-radius: 32px;
-  align-items: center;
-  justify-content: space-between;
+  @include DisplayFlex(row, center, space-between);
   box-shadow: 0px 4px 32px 8px rgba(231, 231, 231, 0.25);
 
   @include responsive(desktop-large) {
@@ -25,13 +23,12 @@
   }
 
   .logo {
-    display: flex;
-    align-items: center;
     cursor: pointer;
     margin-left: 1rem;
+    @include DisplayFlex(row, center, none);
 
     p {
-      font-family: "Inter";
+      font-family: 'Inter';
       font-weight: 500;
       line-height: 17px;
       font-size: 1.125rem;
@@ -58,10 +55,9 @@
 
     .navItems {
       width: 40%;
-      display: flex;
       list-style: none;
-      justify-content: space-evenly;
       @include security();
+      @include DisplayFlex(row, none, space-between);
 
       li {
         cursor: pointer;
@@ -96,12 +92,12 @@
     .addToBrowsers {
       @extend .buttonStyles;
       background: none;
+      transition: all 400ms ease-in-out;
 
       &:hover {
         color: #fff;
         border: none;
         background: #000;
-        transition: all 400ms ease-in-out;
       }
     }
 
@@ -109,12 +105,12 @@
       @extend .buttonStyles;
       color: #fff;
       background: #000;
+      transition: all 400ms ease-in-out;
 
       &:hover {
         color: #000;
         background: #fff;
         border: 1.5px solid #000;
-        transition: all 400ms ease-in-out;
       }
     }
   }

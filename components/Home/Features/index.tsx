@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import FeatureCard from "./Card";
-import styles from "./styles.module.scss";
+import FeatureCard from './Card';
+import styles from './styles.module.scss';
 
-import shieldIcon from "public/assets/shield.svg";
-import chromeIcon from "public/assets/chrome.svg";
-import firefoxIcon from "public/assets/firefox.svg";
-import edgeIcon from "public/assets/edge.svg";
-import braveIcon from "public/assets/brave.svg";
+import shieldIcon from 'public/assets/shield.png';
+import chromeIcon from 'public/assets/chrome.svg';
+import firefoxIcon from 'public/assets/firefox.svg';
+import edgeIcon from 'public/assets/edge.svg';
+import braveIcon from 'public/assets/brave.svg';
 
 const Features = () => {
   return (
@@ -53,7 +53,7 @@ const Features = () => {
 
           <pre className={styles.codeSnippet}>
             <code>
-              <span className={styles.const}>const</span> tx ={" "}
+              <span className={styles.const}>const</span> tx ={' '}
               <span className={styles.const}>await</span>
               <br></br>
               arweave.createTransaction({`{`}
@@ -99,15 +99,15 @@ const Features = () => {
       <section className={styles.browserContainers}>
         <p>Available on your favorite browsers</p>
         <div>
-          <Image width={43} height={43} src={chromeIcon} alt="chrome browser" />
+          <Image width={50} height={50} src={chromeIcon} alt="chrome browser" />
           <Image
-            width={43}
-            height={43}
+            width={50}
+            height={50}
             src={firefoxIcon}
             alt="firefox browser"
           />
-          <Image width={43} height={43} src={braveIcon} alt="brave browser" />
-          <Image width={43} height={43} src={edgeIcon} alt="edge browser" />
+          <Image width={50} height={50} src={braveIcon} alt="brave browser" />
+          <Image width={50} height={50} src={edgeIcon} alt="edge browser" />
         </div>
       </section>
     </>

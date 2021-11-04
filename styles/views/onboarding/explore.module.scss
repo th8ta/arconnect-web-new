@@ -1,4 +1,4 @@
-@import "/styles/mixins.scss";
+@import '/styles/mixins.scss';
 
 .dropDown {
   width: 90%;
@@ -15,19 +15,19 @@
 
   .menu {
     width: 90%;
-    display: flex;
     padding: 1rem;
     cursor: pointer;
     background: none;
     margin: 1rem auto;
     border-radius: 12px;
-    justify-content: center;
     border: 1px solid #000;
+    @include DisplayFlex(row, none, center);
 
     p {
       margin-right: 0.5rem;
+      font-size: 1.125rem;
       font-weight: 600;
-      font-size: 18px;
+      text-align: center;
     }
   }
 
@@ -54,14 +54,12 @@
 }
 
 .contentWrapper {
-  display: flex;
   margin: 0 auto;
-  flex-direction: column;
+  @include DisplayFlex(column, none, none);
 
   @include responsive(desktop-small) {
     padding: 1rem;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include DisplayFlex(row, none, space-evenly);
   }
 
   @include responsive(desktop) {

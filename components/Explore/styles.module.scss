@@ -1,4 +1,4 @@
-@import "/styles/mixins.scss";
+@import '/styles/mixins.scss';
 
 .dappsContainer {
   padding: 1.5rem;
@@ -22,31 +22,35 @@
 }
 
 .mainContainer {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   margin: 0 auto;
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @include DisplayFlex(column, center, none);
 
   @include responsive(desktop-small) {
     width: 70%;
   }
 
   @include responsive(desktop) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    @include DisplayFlex(column, none, space-evenly);
   }
 
   .headerContainer {
     padding: 1.5rem;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    @include DisplayFlex(column-reverse, center, none);
 
     @include responsive(desktop-small) {
       flex-direction: row;
+    }
+
+    img {
+      background: #fff;
+      padding: 0.5rem;
+      border-radius: 50%;
+
+      @include responsive(tablet) {
+        background: none;
+      }
     }
 
     h1 {
@@ -107,13 +111,13 @@
     font-size: 1.125rem;
     border-radius: 1rem;
     background: #000;
+    transition: all 400ms ease-in-out;
 
     &:hover {
       color: #000;
       background: none;
       transform: scale(1.02);
       border: 1.5px solid #000;
-      transition: all 400ms ease-in-out;
     }
 
     @include responsive(desktop) {

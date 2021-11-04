@@ -1,7 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import styles from "./styles.module.scss";
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import styles from './styles.module.scss';
+
+const variants = {
+  open: { x: '100px' },
+  closed: { x: '-100px' }
+};
 
 const QandA = ({
   question,
@@ -18,7 +24,7 @@ const QandA = ({
     <div
       className={styles.questionAnswer}
       onClick={() => setIsOpen(!isOpen)}
-      id={special ? styles.special : ""}
+      id={special ? styles.special : ''}
     >
       <div className={styles.question}>
         <div
@@ -28,7 +34,7 @@ const QandA = ({
         </div>
         <div className={styles.icon}>
           <Image
-            src={isOpen ? "/assets/upArrow.svg" : "/assets/downArrow.svg"}
+            src={isOpen ? '/assets/upArrow.svg' : '/assets/downArrow.svg'}
             alt="dropdown icon"
             width={14}
             height={14}
@@ -55,7 +61,7 @@ const FeedbackCard = ({
   return (
     <div className={styles.userFeedback}>
       <div className={styles.userDP}>
-        <Image src={picUrl} alt="rating icon" width={15} height={15} />
+        <Image src={picUrl} alt="rating icon" width={44} height={44} />
       </div>
       <div className={styles.userInfo}>
         <p>{name}</p>

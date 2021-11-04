@@ -1,7 +1,8 @@
-import Image from "next/image";
-import styles from "./styles.module.scss";
-import DOMPurify from "isomorphic-dompurify";
-import ExploreModal from "components/Explore/ExploreModal";
+/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+import styles from './styles.module.scss';
+import DOMPurify from 'isomorphic-dompurify';
+import ExploreModal from 'components/Explore/ExploreModal';
 
 const ExplorePage = ({
   heading,
@@ -20,12 +21,8 @@ const ExplorePage = ({
   return (
     <>
       <div className={styles.header}>
-        <h1>
-          {heading}
-          <span>
-            <Image src={iconUrl} height={50} width={50} alt={altText} />
-          </span>
-        </h1>
+        <h1>{heading}</h1>
+        <img src={iconUrl} alt={altText} />
       </div>
       <p
         dangerouslySetInnerHTML={{ __html: safeHTML }}

@@ -1,23 +1,21 @@
-@import "/styles/mixins.scss";
+@import '/styles/mixins.scss';
 
 .cardWrapper {
   width: 90%;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
   padding: 1.5rem;
   margin: 1rem auto;
   border-radius: 2rem;
   background: #fff;
+  transition: all 400ms ease;
+  @include DisplayFlex(column, none, none);
 
   &:hover {
     transform: scale(1.04);
-    transition: all 400ms ease;
   }
 
   div {
-    display: flex;
-    align-items: center;
+    @include DisplayFlex(row, center, none);
 
     img {
       width: 30px;
@@ -42,8 +40,6 @@
 .container {
   .introSection {
     width: 90%;
-    display: flex;
-    flex-direction: column;
     color: #fff;
     margin: 0 auto;
     padding: 1.5rem;
@@ -54,6 +50,7 @@
       rgba(0, 0, 0, 1) 42%,
       rgba(0, 0, 0, 1) 100%
     );
+    @include DisplayFlex(column, none, none);
 
     h2 {
       margin-top: 3.5rem;
@@ -76,20 +73,19 @@
       background: #fff;
       border-radius: 15px;
       @include Font(1rem, 700);
+      transition: all 400ms ease;
 
       &:hover {
         color: #fff;
         background: none;
         border: 1.5px solid #fff;
-        transition: all 400ms ease;
       }
     }
   }
 
   @include responsive(tablet) {
     margin: 2rem 0;
-    display: flex;
-    align-items: center;
+    @include DisplayFlex(row, center, none);
 
     .introSection {
       width: 45%;

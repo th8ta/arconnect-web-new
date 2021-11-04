@@ -1,11 +1,7 @@
-@import "/styles/mixins.scss";
+@import '/styles/mixins.scss';
 
 .header {
-  display: flex;
-  margin-top: 1rem;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  @include DisplayFlex(column, center, center);
 
   h1 {
     order: 2;
@@ -14,21 +10,25 @@
     font-weight: 800;
     line-height: 64px;
     text-align: center;
-
-    span {
-      margin-left: 1rem;
-    }
   }
 
-  @media screen and (min-width: 1024px) {
+  img {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  @include responsive(tablet) {
     flex-direction: row;
-    justify-content: flex-start;
 
     h1 {
       order: 0;
-      font-size: 45px;
-      text-align: start;
-      margin-right: 0.5rem;
+      width: auto;
+    }
+
+    div {
+      background: none;
     }
   }
 }

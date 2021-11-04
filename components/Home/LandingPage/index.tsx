@@ -1,27 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import styles from "./styles.module.scss";
-import useGetBrowser from "hooks/useGetBrowser";
+import Link from 'next/link';
 
-const IntroButton = ({
-  dark,
-  text,
-  linkTo
-}: {
-  text: string;
-  dark?: boolean;
-  linkTo: string;
-}) => (
-  <Link href={linkTo}>
-    <a
-      className={
-        dark ? `${styles.introBtn} ${styles.darkIntroBtn}` : styles.introBtn
-      }
-    >
-      {text}
-    </a>
-  </Link>
-);
+import Button from 'components/Button';
+import styles from './styles.module.scss';
+import useGetBrowser from 'hooks/useGetBrowser';
 
 const Showcase = ({
   logoUrl,
@@ -45,19 +27,15 @@ const LandingPage = () => {
         <h1>A better way to experience Arweave</h1>
         <p>
           ArConnect is the <span className={styles.mark}>simplest</span> and
-          most <span className={styles.mark}>secure</span> way to{" "}
-          <span className={styles.highlight}>Store, Transfer, Swap</span> and{" "}
+          most <span className={styles.mark}>secure</span> way to{' '}
+          <span className={styles.highlight}>Store, Transfer, Swap</span> and{' '}
           <span className={styles.highlight}>Access Dapps</span> on Arweave. To
           help you ease into the permaweb, please select which of these best
           describes you.
         </p>
         <div className={styles.introButtons}>
-          <IntroButton linkTo={browserLink} text="I own AR tokens" />
-          <IntroButton
-            linkTo="/onboarding"
-            text="I don't own any AR tokens"
-            dark
-          />
+          <Button href={browserLink} text="I own AR tokens" newTab />
+          <Button href="/onboarding" text="I don't own any AR tokens" dark />
         </div>
       </section>
 

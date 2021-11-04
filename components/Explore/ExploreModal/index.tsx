@@ -1,6 +1,6 @@
-import Image from "next/image";
-import styles from "./styles.module.scss";
-import DOMPurify from "isomorphic-dompurify";
+import Image from 'next/image';
+import styles from './styles.module.scss';
+import DOMPurify from 'isomorphic-dompurify';
 
 const ExploreModal = ({
   modalHeader,

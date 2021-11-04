@@ -1,4 +1,4 @@
-@import "/styles/mixins.scss";
+@import '/styles/mixins.scss';
 
 .modalContainer {
   width: 100%;
@@ -19,11 +19,9 @@
   }
 
   .modalIcon {
-    display: flex;
     background: #fff;
-    justify-content: center;
-    align-items: center;
     border-radius: 120px;
+    @include DisplayFlex(row, center, center);
     box-shadow: 0px 4px 16px 4px rgba(197, 197, 197, 0.25);
 
     width: 50px;
