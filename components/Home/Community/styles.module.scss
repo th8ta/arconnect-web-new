@@ -72,13 +72,13 @@
       color: #00000070;
       background: #fff;
       border-radius: 15px;
+      border: 1.5px solid #fff;
       @include Font(1rem, 700);
       transition: all 400ms ease;
 
       &:hover {
         color: #fff;
         background: none;
-        border: 1.5px solid #fff;
       }
     }
   }

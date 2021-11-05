@@ -93,6 +93,7 @@ $black: #000;
       .getStartedBtn {
         @include Button($white);
         @include Font(1rem, 400);
+        transition: all 400ms ease-in-out;
 
         @include responsive(tablet) {
           width: 70%;
@@ -255,6 +256,7 @@ $black: #000;
         @include Button(gray);
         margin: 1.5rem 0;
         color: #000;
+        transition: all 400ms ease-in-out;
       }
     }
 
