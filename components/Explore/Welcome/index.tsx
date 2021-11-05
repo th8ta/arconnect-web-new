@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -19,8 +19,45 @@ const ChooseActionModal = ({
   modalText: string;
   nerdFace?: boolean;
 }) => {
+  const router = useRouter();
+  const handleAction = (text: string) => {
+    const initObject = {
+      storeTokens: false,
+      accessDapp: false,
+      explore: false
+    };
+    switch (text) {
+      case 'Store AR tokens':
+        localStorage.setItem(
+          'exploreSelected',
+          JSON.stringify({ ...initObject, storeTokens: true })
+        );
+        break;
+
+      case 'Access a Dapp':
+        localStorage.setItem(
+          'exploreSelected',
+          JSON.stringify({
+            ...initObject,
+            accessDapp: true
+          })
+        );
+        break;
+
+      default:
+        localStorage.setItem(
+          'exploreSelected',
+          JSON.stringify({
+            ...initObject,
+            explore: true
+          })
+        );
+    }
+    router.push('/onboarding/explore');
+  };
+
   return (
-    <div className={styles.actionModal}>
+    <div className={styles.actionModal} onClick={() => handleAction(modalText)}>
       <p>{modalText}</p>
       <div
         className={
@@ -48,7 +85,7 @@ const WelcomeModal = ({
     <Link href={linkTo}>
       <a className={styles.modalContainer}>
         <div>
-          <Image src={iconUrl} width={50.16} height={48.37} alt="emoji" />
+          <Image src={iconUrl} width={42} height={40.21} alt="emoji" />
           <p>{buttonText}</p>
         </div>
         <p>{paragraph}</p>

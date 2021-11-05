@@ -42,11 +42,12 @@ const LandingPage = () => {
       <p className={styles.supportText}>Supported by Web 3.0 Trailblazers</p>
 
       <section className={styles.showcase}>
+        <Showcase logoUrl="/assets/verto.svg" altText="Verto" />
         <Showcase logoUrl="/assets/pianity.svg" altText="Pianity" />
         <Showcase logoUrl="/assets/arweave.svg" altText="Arweave" />
         <Showcase logoUrl="/assets/arverify.svg" altText="Arverify" />
         <Showcase logoUrl="/assets/community.svg" altText="Community" />
-        <Showcase logoUrl="/assets/verto.svg" altText="Verto" />
+        <Showcase logoUrl="/assets/ardrive.svg" altText="ArDrive" />
       </section>
     </section>
   );

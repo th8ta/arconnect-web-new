@@ -3,7 +3,7 @@
 .cardsContainer {
   width: 100%;
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 2rem;
   margin-top: 2rem;
   @include DisplayFlex(column, center, none);
 
@@ -85,17 +85,31 @@
 
 .actionModal {
   width: 85%;
+  height: 17rem;
   padding: 1.2rem;
   cursor: pointer;
   margin: 2rem auto;
   background: #fff;
-  @include DisplayFlex(column, center, center);
+  border-radius: 3.375rem;
   transition: all 400ms ease-in-out;
+  @include DisplayFlex(column, center, center);
 
-  &:active {
+  &:active,
+  &:hover {
     transform: scale(0.97);
+    border-radius: 64px;
+    text-align: center;
+  }
+
+  p {
+    width: 80%;
+    padding: 1rem;
+    font-weight: 700;
+    background: #fff;
     text-align: center;
     border-radius: 64px;
+    font-size: 1.375rem;
+    box-shadow: inset 0px 4px 8px 4px rgba(211, 211, 211, 0.25);
   }
 
   .icons {

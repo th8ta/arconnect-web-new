@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import ExplorePage from './ExplorePage';
 import styles from './styles.module.scss';
+import useGetBrowser from 'hooks/useGetBrowser';
 
 export const StoreAR = () => {
   return (
@@ -58,6 +59,7 @@ export const AccessDapps = () => {
 };
 
 export const JustExplore = () => {
+  const { browser, browserLink } = useGetBrowser();
   return (
     <main className={styles.mainContainer}>
       <div className={styles.headerContainer}>
@@ -78,14 +80,14 @@ export const JustExplore = () => {
       <div className={styles.arConnect}>
         <Image
           src="/assets/arconnect-logo.svg"
-          width={174}
-          height={160}
+          width={200}
+          height={195}
           alt="ArConnect Logo"
         />
       </div>
 
-      <Link href="/">
-        <a className={styles.browserBtn}> Add to Brave</a>
+      <Link href={browserLink}>
+        <a className={styles.browserBtn}>{`Add to ${browser}`}</a>
       </Link>
     </main>
   );

@@ -206,8 +206,9 @@
 
       .feedback {
         width: 100%;
+        font-weight: 300;
         grid-column-end: span 2;
-        @include Font(1rem, 300);
+        @include FontSize(0.875rem, 1rem);
       }
     }
 

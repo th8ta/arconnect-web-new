@@ -33,7 +33,7 @@
   > p {
     margin-top: 1rem;
     font-weight: 300;
-    @include FontSize(1rem, 1rem);
+    @include FontSize(0.875rem, 1rem);
   }
 }
 

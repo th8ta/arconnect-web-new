@@ -89,13 +89,6 @@
   .arConnect {
     margin-top: 2rem;
     margin-bottom: 1rem;
-
-    @include responsive(desktop) {
-      img {
-        width: 220px;
-        height: 220px;
-      }
-    }
   }
 
   .browserBtn {
@@ -116,12 +109,12 @@
     &:hover {
       color: #000;
       background: none;
-      transform: scale(1.02);
+      transform: scale(0.97);
       border: 1.5px solid #000;
     }
 
     @include responsive(desktop) {
-      width: 50%;
+      width: 30%;
     }
   }
 }

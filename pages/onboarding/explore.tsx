@@ -5,12 +5,22 @@ import styles from 'styles/views/onboarding/explore.module.scss';
 import { StoreAR, AccessDapps, JustExplore } from 'components/Explore/';
 
 const Explore = () => {
-  const [selected, setSelected] = useState({
+  const stateObject = {
     storeTokens: true,
     accessDapp: false,
     explore: false
-  });
+  };
 
+  let initialState;
+  try {
+    initialState = JSON.parse(
+      localStorage.getItem('exploreSelected') || `${stateObject}`
+    );
+  } catch (error) {
+    initialState = stateObject;
+  }
+
+  const [selected, setSelected] = useState(initialState);
   const [openDropdown, setOpenDropdown] = useState(false);
 
   const Dropdown = () => {
