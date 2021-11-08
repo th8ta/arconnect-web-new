@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import Button from 'components/Button';
 import { useRouter } from 'next/router';
 import { GrClose } from 'react-icons/gr';
 
@@ -29,7 +28,13 @@ export default function Nav() {
 
   return (
     <>
-      <nav className={styles.Nav}>
+      <nav
+        className={
+          router.pathname === '/security'
+            ? `${styles.Nav} ${styles.darkNav}`
+            : styles.Nav
+        }
+      >
         <div className={styles.logo} onClick={() => router.push('/')}>
           <Image
             src="/assets/arconnect-logo.svg"
@@ -51,7 +56,11 @@ export default function Nav() {
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>
             <Image
-              src="/assets/navBurgerMenu.svg"
+              src={
+                router.pathname === '/security'
+                  ? '/assets/navBurgerMenuLight.svg'
+                  : '/assets/navBurgerMenu.svg'
+              }
               alt="arconnect logo"
               width={24.1}
               height={16}
