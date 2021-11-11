@@ -29,13 +29,10 @@
 @mixin security() {
   .security {
     width: auto;
-    text-align: center;
-    pointer-events: none;
-    color: rgba(128, 128, 128, 0.768);
   }
 
   .security::after {
-    content: 'coming soon';
+    content: 'new';
     color: #ffff;
     text-align: end;
     padding: 2px 8px;
