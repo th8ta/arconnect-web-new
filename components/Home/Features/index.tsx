@@ -28,7 +28,7 @@ const Features = () => {
           title="Gateway"
           heading="Access Dapps"
           grayedText="on the permaweb"
-          text="ArConnect is your go to forum to access Dapps and learn about the permaweb ecosystem."
+          text="ArConnect is your go-to solution to access Dapps while learning about the permaweb ecosystem."
           iconUrl="/assets/gateway.svg"
         />
       </section>
