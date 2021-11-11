@@ -15,7 +15,7 @@ export const StoreAR = () => {
         heading="Store you first AR tokens"
         introParagraph="Please click the <span>Install ArConnect</span> button on this page to get ArConnect for your
         browser if you haven’t already. If you have then let’s proceed!
-        basically just have to complete the following actions below step by step"
+        Complete the following actions step-by-step."
       />
       <div className={styles.arConnect}>
         <Image
