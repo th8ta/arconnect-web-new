@@ -46,7 +46,7 @@ const Features = () => {
               across blockchains seamlessly. Explore our Developer documentation
               to get started.
             </p>
-            <Link href="/security">
+            <Link href="https://docs.th8ta.org/arconnect/functions">
               <a className={styles.getStartedBtn}>Get Started</a>
             </Link>
           </div>
