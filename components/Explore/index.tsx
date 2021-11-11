@@ -13,7 +13,7 @@ export const StoreAR = () => {
         iconUrl="/assets/moneyBag.svg"
         altText="money bag emoji"
         heading="Store you first AR tokens"
-        introParagraph="Please click the <span>Download</span> button on this page to get ArConnect for your
+        introParagraph="Please click the <span>Install ArConnect</span> button on this page to get ArConnect for your
         browser if you haven’t already, If you have then let’s proceed! You
         basically just have to complete the following actions below step by step"
       />
