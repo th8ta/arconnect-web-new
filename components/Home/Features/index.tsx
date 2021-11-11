@@ -18,7 +18,7 @@ const Features = () => {
           title="Wallet"
           heading="Store & Transfer"
           grayedText="Arweave assets"
-          text="With ArConnect's user-friendly interface, you can manage your Arweave balance, view and transfer assets and see your latest transactions. The extension allows you to add all your wallets and switch between them easily"
+          text="With ArConnect's user-friendly interface, you can manage your Arweave balance, view and transfer assets, and see your latest transactions. The extension allows you to add all your wallets and switch between them easily."
           handIcon1="/assets/handLeft.svg"
           handIcon2="/assets/handRight.svg"
           wallet
