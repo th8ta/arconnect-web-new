@@ -22,7 +22,7 @@ const Guide = () => {
         <p>
           We have curated a set of quick primers to bring you up to speed on
           crypto, But we understand that you probably need ArConnect for
-          something immediately
+          something immediately...
         </p>
 
         <div className={styles.buttons}>
