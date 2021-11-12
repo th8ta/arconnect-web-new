@@ -52,7 +52,7 @@ const QandA = () => {
   return (
     <section className={styles.faq}>
       <div>
-        <h2>Here to answer your questions</h2>
+        <h2>Here to answer all your questions</h2>
         <p>
           ArConnect is a completely decentralized network built on top of the
           blockweave. Anyone can help power the exchange. Feel freed to reach

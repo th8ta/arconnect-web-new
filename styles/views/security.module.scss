@@ -12,7 +12,7 @@
     text-align: center;
     text-align: center;
     line-height: 4rem;
-    @include FontSize(3rem, 6rem);
+    @include FontSize(3rem, 4.5rem);
 
     span {
       background: #05aa5b;
@@ -32,6 +32,20 @@
       font-weight: 700;
     }
   }
+
+  @include responsive(tablet) {
+    width: 75%;
+    margin: 0 auto;
+
+    h1 {
+      line-height: 120px;
+    }
+
+    p {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
 }
 
 .cardsContainer {
@@ -45,12 +59,29 @@
   margin: 2rem 0.8rem;
   flex-direction: column;
 
-  background: green;
   border-radius: 40px;
   padding-bottom: 3rem;
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
   background: rgba(57, 57, 57, 0.24);
+
+  @include responsive(tablet) {
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #6e008b;
+  }
+
+  @include responsive(desktop-small) {
+    width: 55rem;
+    height: 30rem;
+    margin: 2rem auto;
+  }
+
+  @include responsive(desktop) {
+    width: 60rem;
+  }
 
   .textContainer {
     display: flex;
@@ -72,7 +103,7 @@
       margin: 0.5rem;
       line-height: 60px;
       text-align: center;
-      @include FontSize(3rem, 6rem);
+      @include FontSize(3rem, 3.5rem);
     }
 
     .text {
@@ -81,6 +112,20 @@
       font-weight: 300;
       text-align: center;
       font-family: 'Poppins';
+    }
+
+    @include responsive(tablet) {
+      align-items: flex-start;
+      width: 65%;
+
+      h2,
+      .text {
+        text-align: start;
+      }
+
+      h2 {
+        line-height: 80px;
+      }
     }
   }
 
@@ -115,6 +160,10 @@
     text-align: center;
     padding: 1rem;
     color: #b1b1b1;
+
+    @include responsive(tablet) {
+      font-weight: 700;
+    }
   }
 
   div {
@@ -133,20 +182,30 @@
       background: #fff;
       border-radius: 80px;
       box-shadow: 0px 4px 32px 8px rgba(200, 200, 200, 0.25);
+
+      @include responsive(tablet) {
+        width: 90px;
+        height: 90px;
+      }
     }
   }
 
   a {
-    font-family: 'Inter';
-    font-weight: 400;
     width: 95%;
+    font-weight: 400;
+    font-family: 'Inter';
     color: #000;
     margin: 2rem 0;
     cursor: pointer;
-    padding: 1.5rem;
+    padding: 1.4rem;
     text-align: center;
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0px 8px 16px 2px rgba(223, 223, 223, 0.25);
+
+    @include responsive(tablet) {
+      width: 15rem;
+      padding: 1rem;
+    }
   }
 }
