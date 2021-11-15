@@ -1,7 +1,8 @@
+import 'styles/globals.scss';
 import { useRouter } from 'next/router';
+import type { AppProps } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import Nav from 'components/Nav';
-import type { AppProps } from 'next/app';
 
 interface Props {
   page: string;

@@ -26,6 +26,31 @@
   }
 }
 
+@mixin QandAButton($width) {
+  width: $width;
+  opacity: 0.6;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 1.4rem;
+  border-radius: 0.875rem;
+  border: 2px solid #000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 400ms ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(0.97);
+  }
+}
+
+@mixin FluidFont($font-weight, $fontSize, $valueDiff) {
+  font-weight: $font-weight;
+  font-family: 'Poppins', sans-serif;
+  font-size: calc($fontSize + $valueDiff * ((100vw - 280px) / (1800 - 280)));
+}
+
 @mixin security() {
   .security {
     width: auto;
@@ -128,9 +153,9 @@
   }
 }
 
-@mixin DisplayFlex($direction, $alignment, $justify) {
+@mixin DisplayFlex($direction, $align-items, $justify-content) {
   display: flex;
-  align-items: $alignment;
-  justify-content: $justify;
+  align-items: $align-items;
+  justify-content: $justify-content;
   flex-direction: $direction;
 }

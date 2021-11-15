@@ -3,28 +3,31 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { GrClose } from 'react-icons/gr';
-
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/components/nav.module.scss';
-
-const NavItems = () => (
-  <>
-    <li>
-      <Link href="/">Home</Link>
-    </li>
-    <li>
-      <Link href="https://docs.th8ta.org/">Docs</Link>
-    </li>
-    <li className={styles.security}>
-      <Link href="/security">Security</Link>
-    </li>
-  </>
-);
 
 export default function Nav() {
   const router = useRouter();
   const [openNav, setOpenNav] = useState<boolean>(false);
   const { browser, browserLink: storeLink } = useGetBrowser();
+
+  const handleNavClick = () => {
+    setOpenNav(false);
+  };
+
+  const NavItems = () => (
+    <>
+      <li onClick={handleNavClick}>
+        <Link href="/">Home</Link>
+      </li>
+      <li onClick={handleNavClick}>
+        <Link href="https://docs.th8ta.org/">Docs</Link>
+      </li>
+      <li className={styles.security} onClick={handleNavClick}>
+        <Link href="/security">Security</Link>
+      </li>
+    </>
+  );
 
   return (
     <>
@@ -51,7 +54,7 @@ export default function Nav() {
 
         {openNav ? (
           <div onClick={() => setOpenNav(false)} className={styles.closeMenu}>
-            <GrClose size="1.5rem" />
+            <GrClose size="1.5rem" style={{ color: '#fff' }} />
           </div>
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>

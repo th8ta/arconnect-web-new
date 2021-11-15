@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/views/security.module.scss';
-import QandA from '@/components/QandA';
+import SecurityCard from 'styles/styled-components/securityCard';
+import QandA from 'components/QandA';
 
 const Card = ({
   text,
@@ -11,6 +12,7 @@ const Card = ({
   heading,
   learnMore,
   imageUrl,
+  addBorder,
   altText
 }: {
   text: string;
@@ -19,22 +21,39 @@ const Card = ({
   learnMore?: boolean;
   imageUrl: string;
   altText: string;
+  addBorder?: boolean;
 }) => {
   return (
-    <section className={styles.card}>
-      <div className={styles.textContainer}>
-        <p className={styles.tagline}>{tagline}</p>
+    <SecurityCard border={addBorder}>
+      <div className="textContainer">
+        <p className="tagline">{tagline}</p>
         <h2>{heading}</h2>
-        <p className={styles.text}>{text}</p>
+        <p className="text">{text}</p>
         {learnMore ? <button>Learn More</button> : null}
       </div>
 
-      <div className={styles.icon}>
+      <div className="icon">
         <img src={imageUrl} alt={altText} />
       </div>
-    </section>
+    </SecurityCard>
   );
 };
+
+const FeatureCard = ({
+  tagline,
+  title,
+  text
+}: {
+  tagline: string;
+  title: string;
+  text: string;
+}) => (
+  <div className={styles.featureCard}>
+    <p className={styles.tagline}>{tagline}</p>
+    <h2 className={styles.title}>{title}</h2>
+    <p className={styles.text}>{text}</p>
+  </div>
+);
 
 const Security = () => {
   const { browser, browserLink } = useGetBrowser();
@@ -48,19 +67,22 @@ const Security = () => {
 
       <main className={styles.mainContainer}>
         <section className={styles.landingSection}>
-          <h1>
-            Our Commitment to <span>Security</span>
-          </h1>
-          <p>
-            <span>Security</span> and <span>User Experience</span> are at the
-            foundation of everything we do. We know first hand how overwhelming
-            Web 3.0 can be. What if you could go about your activities on Web
-            3.0 and never have to worry about Security.
-          </p>
+          <div>
+            <h1>
+              Our Commitment to <span>Security</span>
+            </h1>
+            <p>
+              <span>Security</span> and <span>User Experience</span> are at the
+              foundation of everything we do. We know first hand how
+              overwhelming Web 3.0 can be. What if you could go about your
+              activities on Web 3.0 and never have to worry about Security.
+            </p>
+          </div>
         </section>
 
         <section className={styles.cardsContainer}>
           <Card
+            learnMore
             tagline="100% Control"
             heading="Robust Permissions System"
             text="Everytime you connect your wallet, you have the ability to set
@@ -72,6 +94,7 @@ const Security = () => {
           />
 
           <Card
+            addBorder
             tagline="100% Security"
             heading="Encrypted. Everything."
             text="ArConnect uses the password you set on your first configuration to
@@ -83,26 +106,22 @@ const Security = () => {
           />
         </section>
 
-        <section>
-          {/* <div>
-            <p>Re-aasurance</p>
-            <h2>Trust Scores</h2>
-            <p>
-              Before sending tokens to any other address, ArConnect displays a
-              trust score for that address sourced from the ArVerify Protocol.
-            </p>
-          </div>
+        <section className={styles.featureCardsContainer}>
+          <FeatureCard
+            tagline="Re-aasurance"
+            title="Trust Scores"
+            text="Before sending tokens to any other address, ArConnect displays a
+              trust score for that address sourced from the ArVerify Protocol."
+          />
 
-          <div>
-            <p>Control</p>
-            <h2>Application Allowances</h2>
-            <p>
-              Instead of needing to authorize every single transaction on a
-              permaweb application, you can give that application an ArConnect
-              Allowance. If the app ends up attempting to spend more than the
-              allowance, you&apos;ll be re-prompted to increase it.
-            </p>
-          </div> */}
+          <FeatureCard
+            tagline="Control"
+            title="Application Allowances"
+            text="Instead of needing to authorize every single transaction on a
+            permaweb application, you can give that application an ArConnect
+            Allowance. If the app ends up attempting to spend more than the
+            allowance, you'll be re-prompted to increase it."
+          />
         </section>
         <section className={styles.QandA}>
           <QandA />
@@ -126,3 +145,5 @@ const Security = () => {
 };
 
 export default Security;
+
+
