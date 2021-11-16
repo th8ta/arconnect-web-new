@@ -74,13 +74,11 @@ const Features = () => {
             <p className={styles.safu}>SAFU</p>
             <h3>Top-notch Security</h3>
             <p>
-              With ArConnect&apos;s user-friendly interface, you can manage your
-              Arweave balance, view and transfer assets and see your latest
-              transactions. The extension allows you to add all your wallets and
-              switch between them easily. We are also planning to support PST
-              swapping through The Verto Protocol.
+              ArConnect features a robust permissions system, application
+              allowances, and the ability to easily track all ArConnected
+              activity through Dapps.
             </p>
-            <Link href="/docs">
+            <Link href="/#">
               <a className={styles.docsBtn}>Learn more (coming soon)</a>
             </Link>
           </div>
