@@ -114,6 +114,15 @@
         border: 1.5px solid #000;
       }
     }
+
+    .installDark {
+      color: #000;
+      background: #fff;
+
+      &:hover {
+        transform: scale(0.97);
+      }
+    }
   }
 }
 

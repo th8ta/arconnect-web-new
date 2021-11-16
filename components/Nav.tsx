@@ -54,7 +54,8 @@ export default function Nav() {
 
         {openNav ? (
           <div onClick={() => setOpenNav(false)} className={styles.closeMenu}>
-            <GrClose size="1.5rem" style={{ color: '#fff' }} />
+            <img src="/assets/closeCircle.svg" alt="closeMenu" />
+            {/* <GrClose size="1.5rem" /> */}
           </div>
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>
@@ -80,7 +81,14 @@ export default function Nav() {
           </Link>
         ) : (
           <Link href={storeLink}>
-            <a className={styles.install} target="_blank">
+            <a
+              className={
+                router.pathname === '/security'
+                  ? `${styles.install} ${styles.installDark}`
+                  : styles.install
+              }
+              target="_blank"
+            >
               Install ArConnect
             </a>
           </Link>

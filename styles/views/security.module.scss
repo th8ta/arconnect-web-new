@@ -202,11 +202,12 @@
     margin: 2rem 0;
     padding: 1.4rem;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 700;
     background: #fff;
     font-family: 'Inter';
     text-align: center;
     border-radius: 1rem;
+    text-transform: capitalize;
     transition: all 400ms ease;
 
     &:hover {
