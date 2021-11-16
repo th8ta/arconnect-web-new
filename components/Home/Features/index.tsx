@@ -82,7 +82,7 @@ const Features = () => {
               swapping through The Verto Protocol.
             </p>
             <Link href="/docs">
-              <a className={styles.docsBtn}>Learn more</a>
+              <a className={styles.docsBtn}>Learn more (coming soon)</a>
             </Link>
           </div>
           <div className={styles.shieldIcon}>
