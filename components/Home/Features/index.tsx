@@ -73,7 +73,7 @@ const Features = () => {
         <section className={styles.securityContainer}>
           <div className={styles.securityInfo}>
             <p className={styles.safu}>SAFU</p>
-            <h3>Permanent Security</h3>
+            <h3>Top-notch Security</h3>
             <p>
               With ArConnect&apos;s user-friendly interface, you can manage your
               Arweave balance, view and transfer assets and see your latest
