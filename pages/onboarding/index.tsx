@@ -8,7 +8,7 @@ const Welcome = () => (
     </Head>
     <WelcomePage
       heading="Welcome!"
-      text="ArConnect was tailor made for you regardless of your background,
+      text="ArConnect was tailor-made for you regardless of your background,
       skill or experience, it’s unbreakable, yet malleable. Please select
       what best describes you."
     />
