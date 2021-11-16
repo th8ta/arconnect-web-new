@@ -43,7 +43,7 @@ const Features = () => {
             <p className={styles.text}>
               Built by devs for devs, ArConnect allows you to use
               developer-friendly tools to integrate and build on ArConnect
-              across blockchains seamlessly. Explore our Developer documentation
+             seamlessly. Explore our developer documentation
               to get started.
             </p>
             <Link href="https://docs.th8ta.org/arconnect/functions">
