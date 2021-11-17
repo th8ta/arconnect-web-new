@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -54,8 +55,15 @@ export default function Nav() {
 
         {openNav ? (
           <div onClick={() => setOpenNav(false)} className={styles.closeMenu}>
-            <img src="/assets/closeCircle.svg" alt="closeMenu" />
-            {/* <GrClose size="1.5rem" /> */}
+            {router.pathname === '/security' ? (
+              <img
+                src="/assets/closeCircle.svg"
+                alt="closeMenu"
+                style={{ height: '20xp', width: '20px' }}
+              />
+            ) : (
+              <GrClose size="1.5rem" />
+            )}
           </div>
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>
