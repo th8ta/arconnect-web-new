@@ -141,11 +141,6 @@
       font-weight: 700;
       @include FontSize(1rem, 18px);
     }
-
-    .icon {
-      display: none;
-      margin-left: 0.5rem;
-    }
   }
 
   > .answer {

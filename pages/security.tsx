@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
+import DOMPurify from 'isomorphic-dompurify';
+
+import QandA from 'components/QandA';
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/views/security.module.scss';
 import SecurityCard from 'styles/styled-components/securityCard';
-import QandA from 'components/QandA';
 
 const Card = ({
   text,
@@ -23,12 +25,13 @@ const Card = ({
   altText: string;
   addBorder?: boolean;
 }) => {
+  const safeHTML = DOMPurify.sanitize(text);
   return (
     <SecurityCard border={addBorder}>
       <div className="textContainer">
         <p className="tagline">{tagline}</p>
         <h2>{heading}</h2>
-        <p className="text">{text}</p>
+        <p className="text" dangerouslySetInnerHTML={{ __html: safeHTML }}></p>
         {learnMore ? <button>Learn More</button> : null}
       </div>
 
@@ -99,7 +102,7 @@ const Security = () => {
             heading="Encrypted. Everything."
             text="ArConnect uses the password you set on your first configuration to
             encrypt every keyfile you add. Your keyfiles sit securely inside
-            of localstorage (your browser memory) and **never** leave your
+            of localstorage (your browser memory) and **<span>never</span>** leave your
             device."
             imageUrl="/assets/encrypt.svg"
             altText="encrypt icon"
@@ -130,10 +133,10 @@ const Security = () => {
         <section className={styles.browser}>
           <p>Available on your favorite browsers</p>
           <div>
-            <img src="/assets/chrome.svg" alt="" />
-            <img src="/assets/firefox.svg" alt="" />
-            <img src="/assets/brave.svg" alt="" />
-            <img src="/assets/edge.svg" alt="" />
+            <img src="/assets/chrome.svg" alt="chrome" />
+            <img src="/assets/firefox.svg" alt="firefox" />
+            <img src="/assets/brave.svg" alt="brave" />
+            <img src="/assets/edge.svg" alt="edge" />
           </div>
           <Link href={browserLink}>
             <a target="_blank">Add to {browser}</a>

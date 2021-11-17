@@ -37,14 +37,15 @@ export const DisplayFlex = ({
 
 export const QandAButton = css`
   width: 16rem;
-  cursor: pointer;
+  border: none;
   padding: 1rem;
-  margin-top: 1.2rem;
-  margin-bottom: 2rem;
-  border-radius: 0.875rem;
+  cursor: pointer;
   text-align: center;
   font-weight: 700;
   font-size: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.875rem;
   transition: all 400ms ease-in-out;
 
   &:hover {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import styles from 'styles/components/QandA.module.scss';
 
 const QACard = ({
@@ -32,13 +33,16 @@ const QACard = ({
         >
           {question}
         </div>
-        <div className={styles.icon}>
-          <Image
-            src={isOpen ? '/assets/upArrow.svg' : '/assets/downArrow.svg'}
-            alt="dropdown icon"
-            width={14}
-            height={14}
-          />
+        <div>
+          {isOpen ? (
+            <FaChevronUp
+              color={router.pathname === '/security' ? 'white' : 'black'}
+            />
+          ) : (
+            <FaChevronDown
+              color={router.pathname === '/security' ? 'white' : 'black'}
+            />
+          )}
         </div>
       </div>
       <p className={isOpen ? styles.answer : styles.answerActive}>{answer}</p>

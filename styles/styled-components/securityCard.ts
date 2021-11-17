@@ -56,6 +56,10 @@ const SecurityCard = styled.section<Props>`
       padding: 1rem;
       text-align: center;
       ${FluidFont({ fontSize: '15px', valueDiff: 1 })}
+
+      span {
+        font-weight: 700;
+      }
     }
 
     button {
