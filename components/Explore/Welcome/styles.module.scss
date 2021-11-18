@@ -1,9 +1,7 @@
 @import '/styles/mixins.scss';
 
 .cardsContainer {
-  gap: 2rem;
-  margin-top: 2rem;
-  @include DisplayFlex(column, center, none);
+  @include DisplayFlex(column, center, flex-start);
 
   @include responsive(tablet) {
     flex-wrap: wrap;

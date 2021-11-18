@@ -31,7 +31,7 @@
 
   > p {
     margin-top: 1rem;
-    @include FluidFont(300, 0.875rem, 2);
+    @include FluidFont(300, 14px, 1.5);
   }
 }
 
@@ -59,7 +59,7 @@
 
     p {
       margin-bottom: 2rem;
-      @include FluidFont(400, 1rem, 1.5);
+      @include FluidFont(400, 15px, 1.5);
     }
 
     .chatBtn {

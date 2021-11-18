@@ -10,10 +10,11 @@
 
   .landingIntro {
     h1 {
-      text-align: center;
+      padding: 1rem;
       line-height: 1.2;
+      text-align: center;
       word-wrap: break-word;
-      @include FluidFont(800, 3.8rem, 45);
+      @include FluidFont(800, 3rem, 50);
 
       @include responsive(desktop-small) {
         line-height: 1.2;
