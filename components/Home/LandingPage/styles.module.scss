@@ -9,30 +9,14 @@
   }
 
   .landingIntro {
-    padding: 1rem;
-    margin: 0rem auto;
-
     h1 {
-      font-weight: 800;
       text-align: center;
-      line-height: 3.5rem;
-      @include FontSize(2.6rem, 6rem);
+      line-height: 1.1;
+      word-wrap: break-word;
+      @include FluidFont(800, 3.7rem, 45);
 
-      @media screen and (min-width: 321px) {
-        line-height: 4.125rem;
-        @include FontSize(3.5rem, 6rem);
-      }
-
-      @media screen and (min-width: 361px) {
-        @include FontSize(3.7rem, 6rem);
-      }
-
-      @include responsive(desktop) {
-        line-height: 6rem;
-      }
-
-      @include responsive(desktop-large) {
-        line-height: 7.5rem;
+      @include responsive(desktop-small) {
+        line-height: 1.2;
       }
     }
 
@@ -40,7 +24,7 @@
       padding: 0.5rem;
       margin: 1.5rem 0;
       text-align: center;
-      @include FontSize(1rem, 1rem);
+      @include FluidFont(400, 1rem, 6);
 
       .mark {
         text-decoration: underline;
@@ -52,6 +36,7 @@
 
       @include responsive(tablet) {
         margin: 2rem auto;
+        width: 70%;
       }
     }
 
@@ -65,24 +50,10 @@
       }
     }
 
-    @media screen and (min-width: 1024px) {
-      width: 70%;
-    }
-
-    @include responsive(desktop) {
-      width: 60%;
-
-      p {
-        @include FontSize(1rem, 1.3rem);
-      }
-    }
-
-    @include responsive(desktop-large) {
-      width: 60%;
-
-      p {
-        width: 90%;
-      }
+    @media screen and (min-width: 1200px) {
+      margin: 0rem auto;
+      min-width: 65rem;
+      max-width: 70%;
     }
   }
 
@@ -90,10 +61,9 @@
     opacity: 0.2;
     padding: 1rem;
     text-align: center;
-    @include Font(1.25, 600);
+    @include FluidFont(600, 1.25rem, 3.5);
 
     @include responsive(tablet) {
-      @include Font(1.5rem, 500);
       text-decoration: underline;
     }
   }
@@ -107,28 +77,13 @@
     div {
       display: flex;
       padding: 0.5rem;
-      border-radius: 7.5rem;
       background: #fff;
+      border-radius: 7.5rem;
 
       img {
         width: auto;
-        height: 18px;
-      }
-    }
-
-    @include responsive(desktop-small) {
-      div {
-        img {
-          height: 20px;
-        }
-      }
-    }
-
-    @include responsive(desktop-large) {
-      div {
-        img {
-          height: 22px;
-        }
+        min-height: 18px;
+        max-height: 24px;
       }
     }
   }

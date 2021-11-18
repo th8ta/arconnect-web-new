@@ -1,14 +1,10 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import Image from 'next/image';
 
 import FeatureCard from './Card';
 import styles from './styles.module.scss';
-
 import shieldIcon from 'public/assets/shield.png';
-import chromeIcon from 'public/assets/chrome.svg';
-import firefoxIcon from 'public/assets/firefox.svg';
-import edgeIcon from 'public/assets/edge.svg';
-import braveIcon from 'public/assets/brave.svg';
 
 const Features = () => {
   return (
@@ -96,15 +92,10 @@ const Features = () => {
       <section className={styles.browserContainers}>
         <p>Available on your favorite browsers</p>
         <div>
-          <Image width={50} height={50} src={chromeIcon} alt="chrome browser" />
-          <Image
-            width={50}
-            height={50}
-            src={firefoxIcon}
-            alt="firefox browser"
-          />
-          <Image width={50} height={50} src={braveIcon} alt="brave browser" />
-          <Image width={50} height={50} src={edgeIcon} alt="edge browser" />
+          <img src="assets/chrome.svg" alt="chrome browser" />
+          <img src="assets/firefox.svg" alt="firefox browser" />
+          <img src="assets/edge.svg" alt="brave browser" />
+          <img src="assets/brave.svg" alt="edge browser" />
         </div>
       </section>
     </>
