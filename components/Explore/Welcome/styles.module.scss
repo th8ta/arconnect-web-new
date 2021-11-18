@@ -1,0 +1,179 @@
+@import '/styles/mixins.scss';
+
+.cardsContainer {
+  gap: 2rem;
+  padding: 1.5rem 0;
+  @include DisplayFlex(column, center, flex-start);
+
+  @include responsive(tablet) {
+    gap: 2rem;
+    flex-wrap: wrap;
+    @include DisplayFlex(row, center, center);
+  }
+
+  @media screen and (min-width: 64rem) {
+    flex-wrap: nowrap;
+  }
+
+  @include responsive(desktop) {
+    margin-top: 3rem;
+  }
+
+  .modalContainer {
+    width: 90%;
+    height: 15rem;
+    cursor: pointer;
+    padding: 1.2rem;
+    background: #fff;
+    border-radius: 54px;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    > div {
+      background: #fff;
+      width: 95%;
+      @include DisplayFlex(row, center, none);
+      margin: 1rem auto;
+      border-radius: 64px;
+      padding: 1rem;
+      box-shadow: inset 0px 4px 8px 4px rgba(211, 211, 211, 0.25);
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 0.5rem;
+      }
+
+      p {
+        margin-left: 0.5rem;
+        @include FluidFont(700, 1rem, 4);
+      }
+    }
+
+    > p {
+      width: 90%;
+      margin: 1.5rem auto;
+      text-align: center;
+      @include FluidFont(300, 1rem, 1.5);
+    }
+
+    @media screen and (min-width: 32.5rem) {
+      width: 70%;
+    }
+
+    @include responsive(tablet) {
+      width: 45%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 35%;
+    }
+  }
+}
+
+.actionModal {
+  width: 85%;
+  height: 17rem;
+  padding: 1.2rem;
+  cursor: pointer;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 3.375rem;
+  transition: all 400ms ease-in-out;
+  @include DisplayFlex(column, center, center);
+
+  &:active,
+  &:hover {
+    transform: scale(0.97);
+    border-radius: 64px;
+    text-align: center;
+  }
+
+  p {
+    width: 80%;
+    padding: 1rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 64px;
+    @include FluidFont(700, 20px, 2);
+    box-shadow: inset 0px 4px 8px 4px rgba(211, 211, 211, 0.25);
+  }
+
+  .icons {
+    width: 100%;
+    height: 100%;
+    @include DisplayFlex(row, center, center);
+
+    img {
+      width: auto;
+      height: 10rem;
+    }
+  }
+
+  .nerdface {
+    img {
+      height: 7rem;
+    }
+  }
+
+  @media screen and (min-width: 32.5rem) {
+    width: 70%;
+  }
+
+  @include responsive(tablet) {
+    width: 45%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 40%;
+    margin: 1rem;
+  }
+}
+
+.mainWrapper {
+  margin: 0 auto;
+  min-height: 80vh;
+
+  .textContainer {
+    text-align: center;
+    margin-top: 3rem;
+
+    h1 {
+      word-wrap: break-word;
+      @include FluidFont(800, 3.5rem, 40);
+    }
+
+    p {
+      width: 90%;
+      margin: 1rem auto;
+      @include FluidFont(300, 1rem, 4);
+    }
+  }
+
+  @include responsive(tablet) {
+    .modalContiainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .modalContiainer {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @include responsive(desktop) {
+    width: 70%;
+  }
+
+  @include responsive(desktop-large) {
+    width: 55%;
+  }
+}

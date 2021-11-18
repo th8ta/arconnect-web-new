@@ -1,0 +1,50 @@
+@import '/styles/mixins.scss';
+
+.header {
+  @include DisplayFlex(column, center, center);
+
+  h1 {
+    order: 2;
+    width: 90%;
+    line-height: 1.2;
+    text-align: center;
+    @include FluidFont(800, 3.5rem, 5);
+  }
+
+  img {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  @include responsive(tablet) {
+    flex-direction: row;
+
+    h1 {
+      order: 0;
+      width: auto;
+    }
+
+    div {
+      background: none;
+    }
+  }
+}
+
+.innerHTML {
+  margin-top: 2rem;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 3rem;
+  @include FluidFont(300, 1rem, 1.4);
+
+  span {
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,106 @@
+@import '/styles/mixins.scss';
+
+.container {
+  margin: 2rem 0;
+  background: #fff;
+  border-radius: 2.5rem;
+  @include DisplayFlex(column, center, none);
+  box-shadow: 0px 4px 32px 8px rgba(231, 231, 231, 0.25);
+
+  @include responsive(tablet) {
+    width: 45%;
+    padding: 0;
+  }
+
+  .title {
+    color: #fff;
+    margin: 2rem 0;
+    background: #0680d7;
+    padding: 0.2rem 1rem;
+    border-radius: 25.5px;
+    @include FluidFont(300, 0.75rem, 4);
+  }
+
+  h2 {
+    line-height: 1.4;
+    text-align: center;
+    @include FluidFont(700, 2.2rem, 6);
+
+    span {
+      opacity: 0.5;
+      display: block;
+    }
+  }
+
+  .text {
+    padding: 1rem;
+    min-height: 20%;
+    margin-top: 1rem;
+    line-height: 24px;
+    text-align: center;
+    @include FluidFont(300, 14px, 2);
+  }
+
+  .illustrations {
+    width: 100%;
+
+    .gatewayIcon {
+      width: auto;
+      height: 10rem;
+      display: flex;
+      margin: 0 auto;
+
+      @include responsive(desktop) {
+        width: 80%;
+      }
+    }
+
+    .icons {
+      gap: 1rem;
+      @include DisplayFlex(row, none, center);
+
+      .icon1 {
+        width: auto;
+        height: 10rem;
+      }
+
+      .icon2 {
+        width: auto;
+        height: 5rem;
+        align-self: center;
+      }
+    }
+
+    @include responsive(tablet) {
+      .gatewayIcon {
+        height: 14rem;
+      }
+
+      .icons {
+        .icon1 {
+          height: 12rem;
+        }
+
+        .icon2 {
+          height: 6rem;
+        }
+      }
+    }
+
+    @include responsive(desktop-small) {
+      .gatewayIcon {
+        height: 16rem;
+      }
+
+      .icons {
+        .icon1 {
+          height: 15rem;
+        }
+
+        .icon2 {
+          height: 9rem;
+        }
+      }
+    }
+  }
+}

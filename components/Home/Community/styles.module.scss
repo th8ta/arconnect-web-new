@@ -1,0 +1,121 @@
+@import '/styles/mixins.scss';
+
+.cardWrapper {
+  width: 90%;
+  cursor: pointer;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  background: #fff;
+  transition: all 400ms ease;
+  @include DisplayFlex(column, none, none);
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  div {
+    @include DisplayFlex(row, center, none);
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .platform {
+      opacity: 0.6;
+      margin-left: 0.8rem;
+      @include FluidFont(700, 1.25rem, 0);
+    }
+  }
+
+  > p {
+    margin-top: 1rem;
+    @include FluidFont(300, 14px, 1.5);
+  }
+}
+
+.container {
+  .introSection {
+    width: 90%;
+    color: #fff;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 35px;
+    background: radial-gradient(
+      circle,
+      rgba(26, 0, 54, 1) 0%,
+      rgba(0, 0, 0, 1) 42%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    @include DisplayFlex(column, none, none);
+
+    h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 2.5rem;
+      @include FluidFont(700, 2.5rem, 20);
+    }
+
+    p {
+      margin-bottom: 2rem;
+      @include FluidFont(400, 15px, 1.5);
+    }
+
+    .chatBtn {
+      width: 100%;
+      border: none;
+      padding: 0.9rem;
+      text-align: center;
+      color: #00000070;
+      background: #fff;
+      border-radius: 15px;
+      border: 1.5px solid #fff;
+      transition: all 400ms ease;
+      @include FluidFont(700, 1rem, 1);
+
+      &:hover {
+        color: #fff;
+        background: none;
+      }
+    }
+  }
+
+  @include responsive(tablet) {
+    margin: 2rem 0;
+    @include DisplayFlex(row, center, none);
+
+    .introSection {
+      width: 45%;
+      align-self: center;
+      padding: 2rem 1rem;
+
+      h2 {
+        line-height: 60px;
+      }
+    }
+
+    section {
+      width: 50%;
+    }
+  }
+
+  @include responsive(desktop) {
+    width: 80%;
+    margin: 2rem auto;
+
+    .introSection {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 10rem;
+
+      .chatBtn {
+        width: 50%;
+      }
+    }
+  }
+
+  @include responsive(desktop-large) {
+    width: 60%;
+  }
+}

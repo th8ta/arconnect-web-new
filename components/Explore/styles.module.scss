@@ -1,0 +1,117 @@
+@import '/styles/mixins.scss';
+
+.dappsContainer {
+  padding: 1.5rem;
+  @include responsive(tablet) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @include responsive(desktop-small) {
+    width: 60%;
+  }
+
+  .arConnect {
+    width: 8rem;
+    margin: 0 auto;
+
+    @include responsive(tablet) {
+      width: 11rem;
+    }
+  }
+}
+
+.mainContainer {
+  padding: 1rem;
+  margin: 0 auto;
+  @include DisplayFlex(column, center, none);
+
+  @include responsive(desktop-small) {
+    width: 70%;
+  }
+
+  @include responsive(desktop) {
+    @include DisplayFlex(column, none, space-evenly);
+  }
+
+  .headerContainer {
+    padding: 1.5rem;
+    @include DisplayFlex(column-reverse, center, none);
+
+    @include responsive(desktop-small) {
+      flex-direction: row;
+    }
+
+    img {
+      background: #fff;
+      padding: 0.5rem;
+      border-radius: 50%;
+
+      @include responsive(tablet) {
+        background: none;
+      }
+    }
+
+    h1 {
+      line-height: 1.2;
+      text-align: center;
+      margin-right: 1rem;
+      @include FluidFont(800, 3.5rem, 5);
+    }
+  }
+
+  p {
+    margin-top: 1rem;
+    text-align: center;
+    @include FluidFont(300, 1rem, 3);
+
+    @include responsive(desktop-small) {
+      width: 90%;
+    }
+
+    @include responsive(desktop) {
+      width: 80%;
+    }
+
+    @include responsive(desktop-large) {
+      width: 70%;
+    }
+
+    a {
+      cursor: pointer;
+      color: #0645ad;
+    }
+  }
+
+  .arConnect {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .browserBtn {
+    width: 90%;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    padding: 1.2rem;
+    font-weight: 600;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.125rem;
+    border-radius: 1rem;
+    background: #000;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+      color: #000;
+      background: none;
+      transform: scale(0.97);
+      border: 1.5px solid #000;
+    }
+
+    @include responsive(desktop) {
+      width: 30%;
+    }
+  }
+}

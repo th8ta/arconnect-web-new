@@ -1,0 +1,74 @@
+@import '/styles/mixins.scss';
+
+.mainContainer {
+  font-family: 'Poppins';
+  margin-top: 4rem;
+  padding: 1rem;
+  @include DisplayFlex(column, none, none);
+
+  .iconContainer {
+    margin: 0 auto;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 50%;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    @include responsive(tablet) {
+      background: none;
+    }
+  }
+
+  h1 {
+    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include FluidFont(800, 3rem, 45);
+
+    @include responsive(tablet) {
+      span {
+        display: block;
+      }
+    }
+  }
+
+  > p {
+    padding: 0.5rem;
+    font-weight: 300;
+    text-align: center;
+    @include FluidFont(300, 1rem, 3);
+
+    @include responsive(tablet) {
+      width: 70%;
+      margin: 1rem auto;
+    }
+
+    @include responsive(desktop) {
+      width: 50%;
+    }
+
+    @include responsive(desktop-large) {
+      width: 40%;
+    }
+  }
+
+  .buttons {
+    @include DisplayFlex(column, none, none);
+    margin-top: 1rem;
+
+    @include responsive(tablet) {
+      gap: 2rem;
+      @include DisplayFlex(row, none, center);
+
+      .buttonStyles {
+        width: 20rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
