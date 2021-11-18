@@ -1,11 +1,13 @@
 @import '/styles/mixins.scss';
 
 .cardsContainer {
+  gap: 2rem;
+  padding: 1.5rem 0;
   @include DisplayFlex(column, center, flex-start);
 
   @include responsive(tablet) {
-    flex-wrap: wrap;
     gap: 2rem;
+    flex-wrap: wrap;
     @include DisplayFlex(row, center, center);
   }
 
@@ -81,7 +83,7 @@
   height: 17rem;
   padding: 1.2rem;
   cursor: pointer;
-  margin: 2rem auto;
+  margin: 0 auto;
   background: #fff;
   border-radius: 3.375rem;
   transition: all 400ms ease-in-out;
