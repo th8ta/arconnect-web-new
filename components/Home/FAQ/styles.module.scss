@@ -7,7 +7,7 @@
   @include responsive(tablet) {
     height: 70rem;
     margin-top: 1rem;
-    @include DisplayFlex(column, none, space-evenly);
+    @include DisplayFlex(column, flex-start, space-evenly);
   }
 
   @include responsive(desktop) {
@@ -97,7 +97,7 @@
     }
 
     @include responsive(tablet) {
-      @include DisplayFlex(row, none, space-evenly);
+      @include DisplayFlex(row, none, space-around);
 
       > div {
         gap: 0.5rem;
@@ -164,6 +164,13 @@
 
     @include responsive(desktop) {
       > div {
+        > h2 {
+          width: 90%;
+        }
+
+        p {
+          width: 90%;
+        }
         .chatBtn {
           width: 50%;
         }

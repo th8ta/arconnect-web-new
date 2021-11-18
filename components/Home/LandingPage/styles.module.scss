@@ -11,9 +11,9 @@
   .landingIntro {
     h1 {
       text-align: center;
-      line-height: 1.1;
+      line-height: 1.2;
       word-wrap: break-word;
-      @include FluidFont(800, 3.7rem, 45);
+      @include FluidFont(800, 3.8rem, 45);
 
       @include responsive(desktop-small) {
         line-height: 1.2;
@@ -41,7 +41,8 @@
     }
 
     .introButtons {
-      margin: 1rem 0;
+      width: 90%;
+      margin: 1rem auto;
       @include DisplayFlex(column, none, none);
 
       @include responsive(tablet) {

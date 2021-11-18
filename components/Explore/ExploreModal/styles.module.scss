@@ -30,18 +30,18 @@
   }
 
   h3 {
-    @include Font(1rem, 700);
     opacity: 0.7;
     grid-column-end: 4;
     align-self: center;
     grid-column-start: 2;
+    @include FluidFont(700, 1rem, 1);
   }
 
   > p {
-    @include Font(1rem, 400);
     width: 100%;
     margin: 1rem 0.5rem;
     grid-column-end: span 2;
+    @include FluidFont(400, 1rem, 0);
   }
 
   @media screen and (min-width: 1024px) {

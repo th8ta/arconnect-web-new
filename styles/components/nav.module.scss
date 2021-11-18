@@ -1,6 +1,5 @@
 @import '/styles/mixins.scss';
 @import '/styles/partials/mobileNav.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 .Nav {
   z-index: 1;
@@ -49,7 +48,8 @@
   }
 
   @include responsive(tablet) {
-    .burgerMenu {
+    .burgerMenu,
+    .closeMenu {
       display: none;
     }
 
@@ -61,7 +61,7 @@
 
       li {
         cursor: pointer;
-        @include Font(1rem, 400);
+        @include FluidFont(400, 1rem, 0);
         transition: all 400ms ease-in-out;
 
         &:hover {
@@ -87,7 +87,7 @@
       margin-right: 2rem;
       border-radius: 1rem;
       border: 1px solid #000;
-      @include Font(14px, 700);
+      @include FluidFont(700, 14px, 1);
       text-transform: capitalize;
       transition: all 400ms ease-in-out;
     }
