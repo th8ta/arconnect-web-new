@@ -44,19 +44,19 @@ const Community = () => {
           linkTo="https://www.verto.exchange/chat"
           platform="Discord"
           platformIcon="/assets/discord.svg"
-          text="With ArConnect's user-friendly interface, you can manage your Arweave balance, view and transfer assets and see your latest "
+          text="Get involved in the community, find help, and interact directly with the team and community members."
         />
         <Card
           linkTo="https://twitter.com/vertoexchange"
           platform="Twitter"
           platformIcon="/assets/twitter.svg"
-          text="With ArConnect's user-friendly interface, you can manage your Arweave balance, view and transfer assets and see your latest "
+          text="Stay up to date on our announcements, news coverage, and ecosystem-wide news."
         />
         <Card
           linkTo="https://github.com/th8ta/arconnect"
           platform="Github"
           platformIcon="/assets/github.svg"
-          text="With ArConnect's user-friendly interface, you can manage your Arweave balance, view and transfer assets and see your latest "
+          text="Contribute to the codebases, file issues, and collaborate with other developers in the ecosystem."
         />
       </section>
     </section>
