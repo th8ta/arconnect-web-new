@@ -21,8 +21,8 @@ const Guide = () => {
         </h1>
         <p>
           We have curated a set of quick primers to bring you up to speed on
-          crypto, But we understand that you probably need ArConnect for
-          something immediately...
+          crypto, but we understand that you may need ArConnect for something
+          immediately...
         </p>
 
         <div className={styles.buttons}>

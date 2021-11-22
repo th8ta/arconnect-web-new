@@ -40,7 +40,7 @@ const FAQ = () => {
       <QandA />
       <section className={styles.feedbackContainer}>
         <h2>
-          10,000+ people <span>and counting</span> love ArConnect
+          15,000+ people <span>and counting</span> love ArConnect
         </h2>
 
         <section>

@@ -6,15 +6,21 @@
 
   @include responsive(tablet) {
     height: 70rem;
-    @include DisplayFlex(column, none, space-evenly);
+    margin-top: 1rem;
+    @include DisplayFlex(column, flex-start, space-evenly);
+  }
+
+  @include responsive(desktop) {
+    height: 55rem;
   }
 
   .feedbackContainer {
     h2 {
-      margin: 4rem 0;
-      line-height: 3rem;
+      margin: 3rem 0;
+      line-height: 1.3;
       text-align: center;
-      @include Font(2.5rem, 800);
+      word-wrap: break-word;
+      @include FluidFont(800, 2.6rem, 15);
 
       span {
         opacity: 0.5;
@@ -22,9 +28,9 @@
     }
 
     .userFeedback {
-      min-height: 10rem;
       padding: 1rem;
       margin: 2rem 0;
+      min-height: 10rem;
       background: #fff;
       border-radius: 2rem;
       box-shadow: 0px 4px 32px 8px rgba(231, 231, 231, 0.25);
@@ -36,7 +42,7 @@
       .userInfo {
         margin-left: 0.4rem;
         p {
-          @include Font(1.125rem, 700);
+          @include FluidFont(700, 1.125rem, 0);
         }
       }
 
@@ -44,43 +50,57 @@
         width: 100%;
         font-weight: 300;
         grid-column-end: span 2;
-        @include FontSize(0.875rem, 1rem);
+        margin-top: 1rem;
+        @include FluidFont(300, 15px, 1);
       }
     }
 
     @include responsive(tablet) {
       h2 {
-        margin: 2.5rem 0;
+        width: 80%;
+        margin: 2.5rem auto;
       }
 
       section {
         flex-wrap: wrap;
-        @include DisplayFlex(row, center, none);
+        @include DisplayFlex(row, center, flex-start);
 
         .userFeedback {
           width: 45%;
           margin: 1rem;
-
-          .feedback {
-            text-align: start;
-          }
         }
       }
     }
 
     @include responsive(desktop) {
-      width: 80%;
-      margin: 0 auto;
+      h2 {
+        width: 70%;
+        margin: 0 auto;
+      }
 
       section {
+        margin: 2rem 0;
+        @include DisplayFlex(row, center, center);
+
         .userFeedback {
-          width: 30%;
+          width: 25%;
         }
       }
     }
 
     @include responsive(desktop-large) {
-      width: 60%;
+      h2 {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      section {
+        @include DisplayFlex(row, center, center);
+
+        .userFeedback {
+          width: 20%;
+        }
+      }
     }
   }
 }

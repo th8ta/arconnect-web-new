@@ -1,15 +1,13 @@
 @import '/styles/mixins.scss';
 
 .cardsContainer {
-  width: 100%;
   gap: 2rem;
-  padding: 2rem;
-  margin-top: 2rem;
-  @include DisplayFlex(column, center, none);
+  padding: 1.5rem 0;
+  @include DisplayFlex(column, center, flex-start);
 
   @include responsive(tablet) {
-    flex-wrap: wrap;
     gap: 2rem;
+    flex-wrap: wrap;
     @include DisplayFlex(row, center, center);
   }
 
@@ -55,9 +53,7 @@
 
       p {
         margin-left: 0.5rem;
-        font-weight: 700;
-        font-family: inherit;
-        @include FontSize(1rem, 1.25rem);
+        @include FluidFont(700, 1rem, 4);
       }
     }
 
@@ -65,8 +61,7 @@
       width: 90%;
       margin: 1.5rem auto;
       text-align: center;
-      font-weight: 300;
-      @include FontSize(1rem, 1.1rem);
+      @include FluidFont(300, 1rem, 1.5);
     }
 
     @media screen and (min-width: 32.5rem) {
@@ -88,7 +83,7 @@
   height: 17rem;
   padding: 1.2rem;
   cursor: pointer;
-  margin: 2rem auto;
+  margin: 0 auto;
   background: #fff;
   border-radius: 3.375rem;
   transition: all 400ms ease-in-out;
@@ -104,11 +99,10 @@
   p {
     width: 80%;
     padding: 1rem;
-    font-weight: 700;
     background: #fff;
     text-align: center;
     border-radius: 64px;
-    font-size: 1.375rem;
+    @include FluidFont(700, 20px, 2);
     box-shadow: inset 0px 4px 8px 4px rgba(211, 211, 211, 0.25);
   }
 
@@ -152,15 +146,14 @@
     margin-top: 3rem;
 
     h1 {
-      font-weight: 800;
-      @include FontSize(3.5rem, 7.5rem);
+      word-wrap: break-word;
+      @include FluidFont(800, 3.5rem, 40);
     }
 
     p {
       width: 90%;
       margin: 1rem auto;
-      font-weight: 300;
-      @include FontSize(1rem, 1.375rem);
+      @include FluidFont(300, 1rem, 4);
     }
   }
 

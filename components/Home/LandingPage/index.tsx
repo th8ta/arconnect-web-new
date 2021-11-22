@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
-
 import Button from 'components/Button';
 import styles from './styles.module.scss';
 import useGetBrowser from 'hooks/useGetBrowser';

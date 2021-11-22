@@ -1,21 +1,19 @@
 @import '/styles/mixins.scss';
 
-$white: #fff;
-$black: #000;
-
 @mixin FlexColumn() {
   display: flex;
   flex-direction: column;
 }
 
 @mixin Button($borderColor) {
-  width: 90%;
+  width: 95%;
   opacity: 0.6;
-  color: $white;
+  color: #fff;
   padding: 1rem;
   cursor: pointer;
   margin-top: 1rem;
   background: none;
+  align-self: center;
   text-align: center;
   border-radius: 14px;
   border: 1px solid $borderColor;
@@ -30,11 +28,11 @@ $black: #000;
   margin: 2rem auto;
 
   @include responsive(tablet) {
+    padding: 0;
     @include DisplayFlex(row, none, space-evenly);
   }
 
   @include responsive(desktop) {
-    padding: 0;
     width: 70%;
   }
 
@@ -45,7 +43,7 @@ $black: #000;
 
 .features {
   .textContainer {
-    height: 65rem;
+    height: 60rem;
     position: relative;
     background: radial-gradient(
       circle,
@@ -55,12 +53,14 @@ $black: #000;
     );
 
     .textWrapper {
+      color: #fff;
+
       padding: 3rem 0.7rem;
       @include DisplayFlex(column, none, none);
 
       .buidl {
         width: 6rem;
-        color: $black;
+        color: #000;
         margin-top: 2rem;
         text-align: center;
         padding: 0.2rem 1rem;
@@ -69,14 +69,10 @@ $black: #000;
       }
 
       h3 {
-        color: $white;
         margin: 1rem 0;
         line-height: 60px;
-        @include FontSize(2.5rem, 3.625rem);
-
-        @include responsive(desktop) {
-          line-height: 80px;
-        }
+        line-height: 1.5;
+        @include FluidFont(700, 2.5rem, 20);
 
         span {
           opacity: 0.5;
@@ -84,37 +80,35 @@ $black: #000;
       }
 
       .text {
-        color: $white;
-        font-size: 1rem;
-        font-weight: 300;
         margin-bottom: 1rem;
+        @include FluidFont(300, 15px, 1.5);
       }
 
       .getStartedBtn {
-        @include Button($white);
-        @include Font(1rem, 400);
+        @include Button(#fff);
+        @include FluidFont(700, 1rem, 2);
         transition: all 400ms ease-in-out;
 
         @include responsive(tablet) {
-          width: 70%;
-          font-weight: 700;
-        }
-
-        @media screen and (min-width: 1024px) {
-          width: 50%;
+          min-width: 70%;
+          max-width: 50%;
+          align-self: flex-start;
         }
       }
     }
 
     .codeSnippet {
-      color: #ffffff99;
       padding: 2rem;
+      color: #ffffff99;
       background: #000;
       @include DisplayFlex(row, none, center);
 
       code {
         font-size: 12px;
         line-height: 32px;
+        @include FluidFont(300, 12px, 2);
+        font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 
         .const {
           display: inline;
@@ -148,12 +142,14 @@ $black: #000;
 
       .codeSnippet {
         padding: 2rem;
-        width: 50%;
+        min-width: 50%;
+        max-width: 40%;
         height: 50%;
         margin-left: 1rem;
         align-self: center;
         border-top-left-radius: 3.5rem;
         border-top-right-radius: 3.5rem;
+        @include DisplayFlex(row, none, flex-start);
       }
     }
   }
@@ -161,14 +157,6 @@ $black: #000;
   @include responsive(desktop) {
     .textContainer {
       width: 80%;
-
-      .codeSnippet {
-        width: 40%;
-
-        code {
-          font-size: 0.875rem;
-        }
-      }
     }
   }
 
@@ -183,38 +171,34 @@ $black: #000;
 .securityContainer {
   @include FlexColumn();
   position: relative;
-  background: $white;
+  background: #fff;
   border-radius: 3rem;
-  display: flex;
   top: -100px;
 
   .securityInfo {
-    padding-top: 1rem;
-    padding-left: 0.6rem;
     width: 95%;
     margin: 0 auto;
+    padding: 1rem 0 0 0.6rem;
 
     .safu {
       width: 5rem;
-      color: $white;
+      color: #fff;
       padding: 0.4rem;
       margin-top: 3rem;
       text-align: center;
       background: #05aa5b;
       border-radius: 25.5px;
-      @include Font(1rem, 400);
+      @include FluidFont(400, 1rem, 1);
     }
 
     h3 {
-      @include FontSize(2.5rem, 3.625rem);
-
       margin: 1rem 0;
       line-height: 60px;
+      @include FluidFont(700, 2.5rem, 20);
     }
 
     p {
-      font-weight: 300;
-      @include FontSize(1rem, 1rem);
+      @include FluidFont(300, 15px, 1.2);
     }
 
     .docsBtn {
@@ -223,11 +207,11 @@ $black: #000;
   }
 
   .shieldIcon {
-    @include DisplayFlex(row, center, center);
     padding: 2.5rem;
     margin: 2rem auto;
     background: #fff;
     border-radius: 50%;
+    @include DisplayFlex(row, center, center);
     box-shadow: 0px 4px 64px 24px rgba(225, 225, 225, 0.25);
 
     img {
@@ -252,8 +236,8 @@ $black: #000;
 
       .docsBtn {
         display: block;
-        @include Font(1rem, 700);
         @include Button(gray);
+        @include FluidFont(700, 1rem, 2);
         margin: 1.5rem 0;
         color: #000;
         transition: all 400ms ease-in-out;
@@ -290,20 +274,24 @@ $black: #000;
 }
 
 .browserContainers {
-  @include FlexColumn();
   height: 20rem;
+  @include FlexColumn();
 
   p {
-    margin: 2rem 0;
     opacity: 0.5;
+    margin: 2rem 0;
     text-align: center;
-    @include Font(24px, 400);
+    @include FluidFont(400, 24px, 0);
+
+    @include responsive(tablet) {
+      font-weight: 700;
+    }
   }
 
   div {
-    @include DisplayFlex(row, none, center);
     gap: 2rem;
     flex-wrap: wrap;
+    @include DisplayFlex(row, none, center);
   }
 
   @include responsive(tablet) {
@@ -311,8 +299,12 @@ $black: #000;
 
     div {
       img {
-        width: 65px;
-        height: 65px;
+        width: 100px;
+        height: 100px;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 4px 32px 8px rgba(200, 200, 200, 0.25);
       }
     }
   }
