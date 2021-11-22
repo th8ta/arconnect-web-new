@@ -1,7 +1,8 @@
 @import '/styles/mixins.scss';
 
 .container {
-  width: 90%;
+  // width: 90%;
+  padding: 0.5rem;
   margin: 0 auto;
 
   @include responsive(tablet) {

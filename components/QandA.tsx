@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
@@ -56,11 +55,10 @@ const QandA = () => {
   return (
     <section className={styles.faq}>
       <div>
-        <h2>Here to answer all your questions</h2>
+        <h2>Here to answer your questions</h2>
         <p>
-          ArConnect is a completely decentralized network built on top of the
-          blockweave. Anyone can help power the exchange. Feel freed to reach
-          out to the community on Discord or Twitter!
+          Our community of Arweavers is quickly growing. If you have any
+          questions, ideas, or feedback, please let us know!
         </p>
         <Link href="https://verto.exchange/chat">
           <a
@@ -79,20 +77,19 @@ const QandA = () => {
         <QACard
           special
           question="What is Arconnect?"
-          answer="ArConnect is the most user friendly crypto wallet you will ever use. If you're here, it means you're super early, please enter your email to be one of the first users."
+          answer="ArConnect is a crypto wallet that allows you to store, send, receive, and (soon) swap tokens on the blockweave."
         />
         <QACard
           question="What is a Non-custodial wallet?"
-          answer="Coming Soon"
+          answer="A non-custodial wallet stores the crypto you own and you alone have access to it."
         />
-        <QACard question="What is a Browser extension?" answer="Coming Soon" />
+        <QACard
+          question="What is a Browser extension?"
+          answer="A browser extension is piece of software that adds additional features and functions to your browser. Crypto wallets are often installed as browser extensions."
+        />
         <QACard
           question="What happens to my old Arweave wallet?"
-          answer="Coming Soon"
-        />
-        <QACard
-          question="How does ArConnect protect my assets?"
-          answer="Coming Soon"
+          answer="You can use any existing Arweave wallets inside of ArConnect!"
         />
       </section>
     </section>

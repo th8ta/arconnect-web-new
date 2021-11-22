@@ -33,7 +33,7 @@
   }
 
   @include responsive(tablet) {
-    @include DisplayFlex(row, none, space-evenly);
+    @include DisplayFlex(row, none, space-around);
 
     > div {
       gap: 0.5rem;
@@ -65,35 +65,6 @@
 
       #special {
         border-top: none;
-      }
-
-      .questionAnswer {
-        margin: 0;
-        padding: 1rem;
-        border-radius: 0;
-        background: none;
-        border-top: 1px solid black;
-
-        .question {
-          justify-content: space-between;
-
-          .qn {
-            font-weight: 500;
-          }
-
-          .icon {
-            display: block;
-          }
-        }
-
-        > .answer {
-          font-size: 1rem;
-          text-align: start;
-        }
-
-        .answerActive {
-          display: none;
-        }
       }
     }
   }
@@ -150,6 +121,35 @@
 
   .answerActive {
     display: none;
+  }
+
+  @include responsive(tablet) {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    background: none;
+    border-top: 1px solid black;
+
+    .question {
+      justify-content: space-between;
+
+      .qn {
+        font-weight: 500;
+      }
+
+      .icon {
+        display: block;
+      }
+    }
+
+    > .answer {
+      font-size: 1rem;
+      text-align: start;
+    }
+
+    .answerActive {
+      display: none;
+    }
   }
 }
 
