@@ -57,7 +57,8 @@
       width: 40%;
       list-style: none;
       @include security();
-      @include DisplayFlex(row, none, space-between);
+      @include DisplayFlex(row, none, center);
+      gap: 4rem;
 
       li {
         cursor: pointer;
