@@ -87,7 +87,7 @@
 
 .questionAnswer {
   outline: none;
-  padding: 2rem;
+  padding: 1.4rem;
   margin: 2rem 1rem;
   cursor: pointer;
   background: #fff;
@@ -108,7 +108,11 @@
     }
 
     .qnActive {
-      @include FluidFont(700, 1rem, 4);
+      @include FluidFont(700, 1rem, 1.5);
+    }
+
+    .chevron {
+      display: none;
     }
   }
 
@@ -137,7 +141,7 @@
         font-weight: 500;
       }
 
-      .icon {
+      .chevron {
         display: block;
       }
     }
@@ -156,6 +160,10 @@
 .qaDark {
   background: none;
   box-shadow: none;
+  border: 1px solid #3f3f3f;
 
-  border-bottom: 1px solid #3f3f3f;
+  @include responsive(tablet) {
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+  }
 }

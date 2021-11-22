@@ -32,7 +32,7 @@
     }
 
     p {
-      @include Text(400, 1rem, 2);
+      @include Text(400, 15px, 2);
 
       span {
         font-weight: 700;
@@ -96,9 +96,9 @@
 
 .featureCard {
   width: 90%;
+  min-height: 30rem;
   margin: 0 auto;
   padding-top: 3rem;
-  height: 30rem;
   background: rgba(57, 57, 57, 0.24);
   border: 1px solid rgba(220, 220, 220, 0.25);
   backdrop-filter: blur(80px);
@@ -124,6 +124,7 @@
   .text {
     width: 90%;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     padding-left: 2rem;
     @include FluidFont(400, 1rem, 1);
   }
@@ -144,6 +145,8 @@
 }
 
 .QandA {
+  width: 90%;
+  margin: 0 auto;
   padding: 0.5rem;
   background: radial-gradient(
     circle,
@@ -151,6 +154,11 @@
     rgba(0, 0, 0, 1) 19%,
     rgba(0, 0, 0, 1) 100%
   );
+
+  @include responsive(desktop-small) {
+    padding: 1rem;
+    width: 100%;
+  }
 }
 
 .browser {

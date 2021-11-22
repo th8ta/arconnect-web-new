@@ -32,7 +32,7 @@ const QACard = ({
         >
           {question}
         </div>
-        <div>
+        <div className={styles.chevron}>
           {isOpen ? (
             <FaChevronUp
               color={router.pathname === '/security' ? 'white' : 'black'}

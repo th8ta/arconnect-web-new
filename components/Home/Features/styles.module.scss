@@ -292,6 +292,11 @@
     gap: 2rem;
     flex-wrap: wrap;
     @include DisplayFlex(row, none, center);
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
 
   @include responsive(tablet) {
@@ -299,8 +304,8 @@
 
     div {
       img {
-        width: 100px;
-        height: 100px;
+        width: 85px;
+        height: 85px;
         padding: 1rem;
         background: #fff;
         border-radius: 50%;
