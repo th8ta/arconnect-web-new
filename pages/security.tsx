@@ -32,7 +32,11 @@ const Card = ({
         <p className="tagline">{tagline}</p>
         <h2>{heading}</h2>
         <p className="text" dangerouslySetInnerHTML={{ __html: safeHTML }}></p>
-        {learnMore ? <button>Learn More</button> : null}
+        {learnMore ? (
+          <Link href="https://docs.th8ta.org/arconnect/permissions">
+            Learn More
+          </Link>
+        ) : null}
       </div>
 
       <div className="icon">

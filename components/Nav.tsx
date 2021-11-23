@@ -22,7 +22,7 @@ export default function Nav() {
         <Link href="/">Home</Link>
       </li>
       <li onClick={handleNavClick}>
-        <Link href="https://docs.th8ta.org/">Docs</Link>
+        <Link href="https://docs.th8ta.org/arconnect">Docs</Link>
       </li>
       <li className={styles.security} onClick={handleNavClick}>
         <Link href="/security">Security</Link>

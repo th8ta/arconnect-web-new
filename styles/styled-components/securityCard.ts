@@ -62,7 +62,7 @@ const SecurityCard = styled.section<Props>`
       }
     }
 
-    button {
+    a {
       ${QandAButton}
     }
 
