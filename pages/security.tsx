@@ -78,7 +78,8 @@ const Security = () => {
               <span>Security</span> and <span>User Experience</span> are the
               foundation of every protocol we build. We know first-hand how
               overwhelming Web 3.0 can be. What if you could go about your
-              activities on Web 3.0 without ever having to worry about the security of your wallet?
+              activities on Web 3.0 without ever having to worry about the
+              security of your wallet?
             </p>
           </div>
         </section>
