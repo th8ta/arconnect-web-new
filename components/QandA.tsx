@@ -76,7 +76,7 @@ const QandA = () => {
       <section>
         <QACard
           special
-          question="What is Arconnect?"
+          question="What is ArConnect?"
           answer="ArConnect is a crypto wallet that allows you to store, send, receive, and (soon) swap tokens on the blockweave."
         />
         <QACard
