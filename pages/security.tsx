@@ -75,10 +75,10 @@ const Security = () => {
               Our Commitment to <span>Security</span>
             </h1>
             <p>
-              <span>Security</span> and <span>User Experience</span> are at the
-              foundation of everything we do. We know first hand how
+              <span>Security</span> and <span>User Experience</span> are the
+              foundation of every protocol we build. We know first-hand how
               overwhelming Web 3.0 can be. What if you could go about your
-              activities on Web 3.0 and never have to worry about Security.
+              activities on Web 3.0 without ever having to worry about the security of your wallet?
             </p>
           </div>
         </section>
@@ -86,23 +86,23 @@ const Security = () => {
         <section className={styles.cardsContainer}>
           <Card
             learnMore
-            tagline="100% Control"
+            tagline="Complete Control"
             heading="Robust Permissions System"
-            text="Everytime you connect your wallet, you have the ability to set
+            text="Each time you connect your wallet, you have the ability to set
               exactly which permissions an application can utilize. ArConnect
-              currently supports 8 permissions which include x y, and z. You can
-              read more about permissions below"
+              currently supports 8 permissions, including ACCESS_ADDRESS, SIGN_TRANSACTION, and ENCRYPT. You can
+              read more about permissions below."
             imageUrl="/assets/security.svg"
             altText="security icon"
           />
 
           <Card
             addBorder
-            tagline="100% Security"
+            tagline="Your Eyes Only"
             heading="Encrypted. Everything."
             text="ArConnect uses the password you set on your first configuration to
             encrypt every keyfile you add. Your keyfiles sit securely inside
-            of localstorage (your browser memory) and **<span>never</span>** leave your
+            of localstorage (your browser memory) and <span>never</span> leave your
             device."
             imageUrl="/assets/encrypt.svg"
             altText="encrypt icon"
@@ -111,14 +111,14 @@ const Security = () => {
 
         <section className={styles.featureCardsContainer}>
           <FeatureCard
-            tagline="Re-aasurance"
+            tagline="Reassurance"
             title="Trust Scores"
             text="Before sending tokens to any other address, ArConnect displays a
               trust score for that address sourced from the ArVerify Protocol."
           />
 
           <FeatureCard
-            tagline="Control"
+            tagline="Limit(less)"
             title="Application Allowances"
             text="Instead of needing to authorize every single transaction on a
             permaweb application, you can give that application an ArConnect
