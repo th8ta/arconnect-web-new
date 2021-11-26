@@ -176,6 +176,7 @@
     color: #b1b1b1;
     @include Text(400, 1.375rem, 0);
 
+    
     @include responsive(tablet) {
       font-weight: 700;
     }
