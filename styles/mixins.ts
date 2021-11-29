@@ -1,22 +1,11 @@
+import * as Types from 'types';
 import { css } from 'styled-components';
-
-interface FluidFontProps {
-  fontWeight?: string;
-  fontSize: string;
-  valueDiff: number;
-}
-
-interface DisplayFlexProps {
-  alignItems?: string;
-  justifyContent?: string;
-  flexDirection?: string;
-}
 
 export const FluidFont = ({
   fontWeight,
   fontSize,
   valueDiff
-}: FluidFontProps) => css`
+}: Types.FluidFontProps) => css`
   font-weight: ${fontWeight || '400'};
   font-family: 'Poppins', sans-serif;
   font-size: calc(
@@ -24,14 +13,37 @@ export const FluidFont = ({
   );
 `;
 
+export const FluidFontTest = (
+  fontWeight: number,
+  fontSize: string,
+  valueDiff: number
+) => css`
+  font-weight: ${fontWeight || 400};
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(
+    ${fontSize} + ${valueDiff} * ((100vw - 280px) / (1800 - 280))
+  );
+`;
+
 export const DisplayFlex = ({
+  flexDirection,
   alignItems,
-  justifyContent,
-  flexDirection
-}: DisplayFlexProps) => css`
+  justifyContent
+}: Types.DisplayFlexProps) => css`
   display: flex;
-  align-items: ${alignItems || 'flex-start'};
   flex-direction: ${flexDirection || 'row'};
+  align-items: ${alignItems || 'flex-start'};
+  justify-content: ${justifyContent || 'flex-start'};
+`;
+
+export const DisplayFlexTest = (
+  flexDirection: string,
+  alignItems: string,
+  justifyContent: string
+) => css`
+  display: flex;
+  flex-direction: ${flexDirection || 'row'};
+  align-items: ${alignItems || 'flex-start'};
   justify-content: ${justifyContent || 'flex-start'};
 `;
 

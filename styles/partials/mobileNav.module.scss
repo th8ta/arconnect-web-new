@@ -1,81 +1,81 @@
-// $background: linear-gradient(180deg, #000000 0%, #000000 100%);
+$background: linear-gradient(180deg, #000000 0%, #000000 100%);
 
-// .mobileNav {
-//   width: 100%;
-//   margin: 0 auto;
-//   position: absolute;
-//   top: 2rem;
+.mobileNav {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 2rem;
 
-//   @include responsive(tablet) {
-//     display: none;
-//   }
+  @include responsive(tablet) {
+    display: none;
+  }
 
-//   .showNav {
-//     @include mobileNav;
-//     height: 5rem;
-//     animation: showMenu 400ms;
-//     animation-fill-mode: forwards;
+  .showNav {
+    @include mobileNav;
+    height: 5rem;
+    animation: showMenu 400ms;
+    animation-fill-mode: forwards;
 
-//     background: $background;
+    background: $background;
 
-//     @keyframes showMenu {
-//       to {
-//         height: 15rem;
-//         margin-top: 6.5rem;
-//       }
-//     }
+    @keyframes showMenu {
+      to {
+        height: 15rem;
+        margin-top: 6.5rem;
+      }
+    }
 
-//     li {
-//       opacity: 0;
-//       margin-top: 1.5rem;
-//       @include FluidFont(300, 1rem, 2);
+    li {
+      opacity: 0;
+      margin-top: 1.5rem;
+      @include FluidFont(300, 1rem, 2);
 
-//       animation: text 1s;
-//       animation-fill-mode: forwards;
+      animation: text 1s;
+      animation-fill-mode: forwards;
 
-//       @keyframes text {
-//         to {
-//           opacity: 1;
-//         }
-//       }
-//     }
-//   }
+      @keyframes text {
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
 
-//   .closeNav {
-//     @include mobileNav;
-//     margin: 0 auto;
-//     animation: closeMenu 400ms;
-//     animation-fill-mode: forwards;
+  .closeNav {
+    @include mobileNav;
+    margin: 0 auto;
+    animation: closeMenu 400ms;
+    animation-fill-mode: forwards;
 
-//     @keyframes closeMenu {
-//       from {
-//         height: 15rem;
-//         margin-top: 6.5rem;
-//         background: $background;
-//       }
-//       to {
-//         top: 0%;
-//         width: 89%;
-//         height: 5rem;
-//         background: $background;
-//       }
-//     }
+    @keyframes closeMenu {
+      from {
+        height: 15rem;
+        margin-top: 6.5rem;
+        background: $background;
+      }
+      to {
+        top: 0%;
+        width: 89%;
+        height: 5rem;
+        background: $background;
+      }
+    }
 
-//     li {
-//       opacity: 1;
-//       margin-top: 1.5rem;
-//       @include FluidFont(300, 1rem, 2);
+    li {
+      opacity: 1;
+      margin-top: 1.5rem;
+      @include FluidFont(300, 1rem, 2);
 
-//       animation: fadeText 400ms;
-//       animation-fill-mode: forwards;
+      animation: fadeText 400ms;
+      animation-fill-mode: forwards;
 
-//       @keyframes fadeText {
-//         to {
-//           opacity: 0;
-//         }
-//       }
-//     }
-//   }
+      @keyframes fadeText {
+        to {
+          opacity: 0;
+        }
+      }
+    }
+  }
 
-//   @include security();
-// }
+  @include security();
+}
