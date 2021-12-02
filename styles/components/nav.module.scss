@@ -79,7 +79,7 @@
 
   @include responsive(desktop-small) {
     .buttonStyles {
-      width: 10rem;
+      min-width: 10rem;
       padding: 0.8rem;
       cursor: pointer;
       text-align: center;
