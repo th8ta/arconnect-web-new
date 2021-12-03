@@ -97,7 +97,7 @@ export default function Nav() {
               }
               target="_blank"
             >
-              Download
+              Install ArConnect
             </a>
           </Link>
         )}

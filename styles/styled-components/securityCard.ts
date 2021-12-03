@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FluidFont, DisplayFlex, QandAButton } from 'styles/mixins';
+import { FluidFont, DisplayFlex, QandAButton } from '@/styles/styledMixins';
 
 interface Props {
   border?: boolean;
