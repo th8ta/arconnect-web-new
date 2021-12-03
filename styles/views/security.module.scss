@@ -1,0 +1,233 @@
+@import '/styles/mixins.scss';
+
+@mixin Text($fs-weight, $font, $diff) {
+  padding: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+  @include FluidFont($fs-weight, $font, $diff);
+}
+
+.mainContainer {
+  color: #fff;
+  background: #000;
+}
+
+.landingSection {
+  background: radial-gradient(
+    circle at 100%,
+    rgba(42, 2, 92, 1) 0%,
+    rgba(42, 2, 92, 1) 1%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 17%
+  );
+  div {
+    h1 {
+      @include Text(800, 2.8rem, 30);
+
+      span {
+        padding: 0 15px;
+        border-radius: 42px;
+        background: #05aa5b;
+      }
+    }
+
+    p {
+      @include Text(400, 15px, 2);
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  @include responsive(tablet) {
+    div {
+      width: 36rem;
+      margin: 0 auto;
+    }
+
+    p {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  @include responsive(desktop-small) {
+    div {
+      width: 42rem;
+    }
+  }
+
+  @media screen and (min-width: 1500px) {
+    div {
+      width: 50rem;
+    }
+  }
+}
+
+.cardsContainer {
+  @include DisplayFlex(column, flex-start, flex-start);
+}
+
+.featureCardsContainer {
+  gap: 2rem;
+  margin: 2rem 0;
+  @include DisplayFlex(column, flex-start, flex-start);
+  background: radial-gradient(
+    circle at 50%,
+    rgba(42, 2, 92, 1) 0%,
+    rgba(42, 2, 92, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 1) 15%
+  );
+
+  @include responsive(tablet) {
+    gap: 3rem;
+    padding: 1rem;
+    @include DisplayFlex(row, flex-start, center);
+    background: radial-gradient(
+      circle at 25%,
+      rgba(42, 2, 92, 1) 0%,
+      rgba(42, 2, 92, 1) 0%,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 15%
+    );
+  }
+}
+
+.featureCard {
+  width: 90%;
+  min-height: 30rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  background: rgba(57, 57, 57, 0.24);
+  border: 1px solid rgba(220, 220, 220, 0.25);
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+  border-radius: 40px;
+  @include DisplayFlex(column, flex-start, flex-start);
+
+  .tagline {
+    margin-left: 1.5rem;
+    padding: 0.2rem 1rem;
+    background: #05aa5b;
+    border-radius: 25.5px;
+    margin-bottom: 0.5rem;
+    @include FluidFont(400, 12px, 4);
+  }
+
+  h2 {
+    @include Text(700, 2.6rem, 15);
+    padding-left: 1.5rem;
+    text-align: start;
+  }
+
+  .text {
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    @include FluidFont(400, 1rem, 1);
+  }
+
+  @include responsive(tablet) {
+    width: 30rem;
+  }
+
+  @include responsive(desktop-small) {
+    width: 30rem;
+    height: 35rem;
+    margin: 0;
+
+    h2 {
+      line-height: 82px;
+    }
+  }
+}
+
+.QandA {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background: radial-gradient(
+    circle,
+    rgba(17, 1, 38, 1) 5%,
+    rgba(0, 0, 0, 1) 19%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  @include responsive(desktop-small) {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+.browser {
+  background: radial-gradient(
+    circle at 100%,
+    rgba(42, 2, 92, 1) 0%,
+    rgba(42, 2, 92, 1) 1%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 17%
+  );
+  margin-top: 2rem;
+  @include DisplayFlex(column, center, flex-start);
+
+  p {
+    color: #b1b1b1;
+    @include Text(400, 1.375rem, 0);
+
+    @include responsive(tablet) {
+      font-weight: 700;
+    }
+  }
+
+  div {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include DisplayFlex(row, flex-start, center);
+
+    img {
+      width: 70px;
+      height: 70px;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 80px;
+      box-shadow: 0px 4px 32px 8px rgba(200, 200, 200, 0.25);
+
+      @include responsive(tablet) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+
+  a {
+    width: 95%;
+    color: #000;
+    margin: 2rem 0;
+    padding: 1.4rem;
+    cursor: pointer;
+    font-weight: 700;
+    background: #fff;
+    font-family: 'Inter';
+    text-align: center;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    transition: all 400ms ease;
+
+    &:hover {
+      color: #fff;
+      background: none;
+      border: 1px solid gray;
+      transform: scale(1.04);
+    }
+
+    @include responsive(tablet) {
+      width: 15rem;
+      padding: 1rem;
+    }
+  }
+}

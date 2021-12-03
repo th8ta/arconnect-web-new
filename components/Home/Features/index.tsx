@@ -74,8 +74,8 @@ const Features = () => {
               allowances, and the ability to easily track all ArConnected
               activity through Dapps.
             </p>
-            <Link href="/#">
-              <a className={styles.docsBtn}>Learn more (coming soon)</a>
+            <Link href="/security">
+              <a className={styles.docsBtn}>Learn more</a>
             </Link>
           </div>
           <div className={styles.shieldIcon}>

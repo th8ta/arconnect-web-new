@@ -1,0 +1,169 @@
+@import '/styles/mixins.scss';
+
+.faq {
+  > div {
+    @include DisplayFlex(column, none, none);
+    gap: 1rem;
+
+    > h2 {
+      line-height: 1.2;
+      text-align: center;
+      @include FluidFont(700, 2.5rem, 20);
+    }
+
+    > p {
+      padding: 1rem;
+      text-align: center;
+      @include FluidFont(300, 15px, 2);
+    }
+
+    .chatBtn {
+      @include QandAButton(90%);
+    }
+
+    .chatBtnDark {
+      opacity: 1;
+      color: #000;
+      background: #fff;
+    }
+  }
+
+  @include responsive(tablet) {
+    @include DisplayFlex(row, none, space-around);
+
+    > div {
+      gap: 0.5rem;
+      width: 45%;
+      min-height: 30rem;
+      justify-content: center;
+
+      > h2 {
+        text-align: start;
+      }
+
+      > p {
+        padding: 0;
+        margin: 1.5rem 0;
+        text-align: start;
+      }
+
+      .chatBtn {
+        margin: 0;
+        width: 70%;
+        padding: 0.7rem;
+      }
+    }
+
+    > section {
+      width: 50%;
+      gap: 1rem;
+      @include DisplayFlex(column, none, center);
+
+      #special {
+        border-top: none;
+      }
+    }
+  }
+
+  @include responsive(desktop) {
+    width: 75%;
+    margin: 0 auto;
+
+    > div {
+      .chatBtn {
+        width: 50%;
+      }
+    }
+
+    section {
+      gap: 1.3rem;
+    }
+  }
+
+  @include responsive(desktop-large) {
+    width: 70%;
+  }
+}
+
+.questionAnswer {
+  outline: none;
+  padding: 1.4rem;
+  margin: 2rem 1rem;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0px -8px 32px rgba(220, 220, 220, 0.25);
+
+  .question {
+    @include DisplayFlex(row, center, center);
+
+    .qn {
+      width: auto;
+      font-weight: 500;
+      text-align: center;
+
+      @include responsive(tablet) {
+        text-align: start;
+      }
+    }
+
+    .qnActive {
+      @include FluidFont(700, 1rem, 1.5);
+    }
+
+    .chevron {
+      display: none;
+    }
+  }
+
+  > .answer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+
+  .answerActive {
+    display: none;
+  }
+
+  @include responsive(tablet) {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    background: none;
+    border-top: 1px solid black;
+
+    .question {
+      justify-content: space-between;
+
+      .qn {
+        font-weight: 500;
+      }
+
+      .chevron {
+        display: block;
+      }
+    }
+
+    > .answer {
+      font-size: 1rem;
+      text-align: start;
+    }
+
+    .answerActive {
+      display: none;
+    }
+  }
+}
+
+.qaDark {
+  background: none;
+  box-shadow: none;
+  border: 1px solid #3f3f3f;
+
+  @include responsive(tablet) {
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+  }
+}

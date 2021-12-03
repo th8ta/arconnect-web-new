@@ -1,35 +1,46 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import Button from 'components/Button';
 import { useRouter } from 'next/router';
-import { GrClose } from 'react-icons/gr';
-
+CgClose;
+// import { GrClose } from 'react-icons/gr';
+import { CgClose } from 'react-icons/cg';
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/components/nav.module.scss';
-
-const NavItems = () => (
-  <>
-    <li>
-      <Link href="/">Home</Link>
-    </li>
-    <li>
-      <Link href="https://docs.th8ta.org/">Docs</Link>
-    </li>
-    <li className={styles.security}>
-      <Link href="/security">Security</Link>
-    </li>
-  </>
-);
 
 export default function Nav() {
   const router = useRouter();
   const [openNav, setOpenNav] = useState<boolean>(false);
   const { browser, browserLink: storeLink } = useGetBrowser();
 
+  const handleNavClick = () => {
+    setOpenNav(false);
+  };
+
+  const NavItems = () => (
+    <>
+      <li onClick={handleNavClick}>
+        <Link href="/">Home</Link>
+      </li>
+      <li onClick={handleNavClick}>
+        <Link href="https://docs.th8ta.org/arconnect">Docs</Link>
+      </li>
+      <li className={styles.security} onClick={handleNavClick}>
+        <Link href="/security">Security</Link>
+      </li>
+    </>
+  );
+
   return (
     <>
-      <nav className={styles.Nav}>
+      <nav
+        className={
+          router.pathname === '/security'
+            ? `${styles.Nav} ${styles.darkNav}`
+            : styles.Nav
+        }
+      >
         <div className={styles.logo} onClick={() => router.push('/')}>
           <Image
             src="/assets/arconnect-logo.svg"
@@ -46,12 +57,19 @@ export default function Nav() {
 
         {openNav ? (
           <div onClick={() => setOpenNav(false)} className={styles.closeMenu}>
-            <GrClose size="1.5rem" />
+            <CgClose
+              size="1.8rem"
+              color={router.pathname === '/security' ? '#fff' : '#000'}
+            />
           </div>
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>
             <Image
-              src="/assets/navBurgerMenu.svg"
+              src={
+                router.pathname === '/security'
+                  ? '/assets/navBurgerMenuLight.svg'
+                  : '/assets/navBurgerMenu.svg'
+              }
               alt="arconnect logo"
               width={24.1}
               height={16}
@@ -68,7 +86,14 @@ export default function Nav() {
           </Link>
         ) : (
           <Link href={storeLink}>
-            <a className={styles.install} target="_blank">
+            <a
+              className={
+                router.pathname === '/security'
+                  ? `${styles.install} ${styles.installDark}`
+                  : styles.install
+              }
+              target="_blank"
+            >
               Install ArConnect
             </a>
           </Link>

@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 import Metas from 'components/Metas';
-import Footer from 'components/Footer';
 import FAQ from 'components/Home/FAQ';
+import Footer from 'components/Footer';
 import Features from 'components/Home/Features';
 import Community from 'components/Home/Community';
 import LandingPage from 'components/Home/LandingPage';
