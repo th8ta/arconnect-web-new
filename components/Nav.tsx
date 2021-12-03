@@ -3,7 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { GrClose } from 'react-icons/gr';
+CgClose;
+// import { GrClose } from 'react-icons/gr';
+import { CgClose } from 'react-icons/cg';
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/components/nav.module.scss';
 
@@ -55,15 +57,10 @@ export default function Nav() {
 
         {openNav ? (
           <div onClick={() => setOpenNav(false)} className={styles.closeMenu}>
-            {router.pathname === '/security' ? (
-              <img
-                src="/assets/closeCircle.svg"
-                alt="closeMenu"
-                style={{ height: '20xp', width: '20px' }}
-              />
-            ) : (
-              <GrClose size="1.5rem" />
-            )}
+            <CgClose
+              size="1.8rem"
+              color={router.pathname === '/security' ? '#fff' : '#000'}
+            />
           </div>
         ) : (
           <div className={styles.burgerMenu} onClick={() => setOpenNav(true)}>
