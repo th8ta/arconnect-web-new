@@ -32,8 +32,12 @@ const LandingPage = () => {
           describes you.
         </p>
         <div className={styles.introButtons}>
-          <Button href={browserLink} text="I own AR tokens" newTab />
-          <Button href="/onboarding" text="I don't own any AR tokens" dark />
+          <Button href={browserLink} text="Download ArConnect" newTab />
+          <Button
+            href="/onboarding/choose-action"
+            text="Get help Onboarding"
+            dark
+          />
         </div>
       </section>
 

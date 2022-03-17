@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 CgClose;
-// import { GrClose } from 'react-icons/gr';
 import { CgClose } from 'react-icons/cg';
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/components/nav.module.scss';
@@ -79,10 +78,9 @@ export default function Nav() {
 
         {router.pathname === '/' ? (
           <Link href={storeLink}>
-            <a
-              className={styles.addToBrowsers}
-              target="_blank"
-            >{`Add to ${browser}`}</a>
+            <a className={styles.addToBrowsers} target="_blank">
+              Download ArConnect
+            </a>
           </Link>
         ) : (
           <Link href={storeLink}>
@@ -94,7 +92,7 @@ export default function Nav() {
               }
               target="_blank"
             >
-              Install ArConnect
+              Download ArConnect
             </a>
           </Link>
         )}

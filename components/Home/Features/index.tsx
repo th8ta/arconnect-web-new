@@ -37,9 +37,9 @@ const Features = () => {
               Develop <span>on ArConnect</span>
             </h3>
             <p className={styles.text}>
-              Built by devs for devs, ArConnect allows you to use
-              developer-friendly tools to integrate and build on ArConnect
-              seamlessly. Explore our developer documentation to get started.
+              For Developers, ArConnect allows you to use developer-friendly
+              tools to integrate and build on ArConnect seamlessly. Explore our
+              developer documentation to get started.
             </p>
             <Link href="https://docs.th8ta.org/arconnect/functions">
               <a className={styles.getStartedBtn}>Get Started</a>
