@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import Metas from 'components/Metas';
 import FAQ from 'components/Home/FAQ';
 import Footer from 'components/Footer';
@@ -10,13 +8,9 @@ import LandingPage from 'components/Home/LandingPage';
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>ArConnect - Secure wallet management for Arweave</title>
-        <link rel="shortcut icon" href="/logo256.png" />
-      </Head>
       <Metas
-        title="ArConnect"
-        description="Secure wallet management for Arweave"
+        title="ArConnect - The easiest web wallet for Arweave"
+        description="The easiest web wallet for Arweave. ArConnect enables you to manage your Arweave-based funds and securely log-in to permaweb apps through a sleek web extension."
         image="/logo256.png"
       />
       <main>
