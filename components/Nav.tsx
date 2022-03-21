@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from './Logo';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 CgClose;
@@ -56,15 +57,7 @@ export default function Nav() {
             : styles.Nav
         }
       >
-        <div className={styles.logo} onClick={() => router.push('/')}>
-          <Image
-            src="/assets/arconnect-logo.svg"
-            alt="arconnect logo"
-            width={30}
-            height={30}
-          />
-          <p>ArConnect</p>
-        </div>
+        <Logo />
 
         <ul className={styles.navItems}>
           <NavItems />
