@@ -8,7 +8,7 @@ const LogoWrapper = styled.div`
   margin-left: 1rem;
   display: flex;
   align-items: center;
-  
+
   p {
     font-family: 'Inter';
     font-weight: 500;
