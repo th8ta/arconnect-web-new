@@ -19,7 +19,7 @@ const Home = () => {
         description="Secure wallet management for Arweave"
         image="/logo256.png"
       />
-      <main>
+      <main style={{ marginTop: '8rem' }}>
         <LandingPage />
         <Features />
         <FAQ />

@@ -98,21 +98,21 @@ const Explore = () => {
 
   if (selected.accessDapp)
     return (
-      <section className={styles.contentWrapper}>
+      <section className={styles.contentWrapper} style={{ marginTop: '8rem' }}>
         <Dropdown />
         <AccessDapps />
       </section>
     );
   if (selected.explore)
     return (
-      <section className={styles.contentWrapper}>
+      <section className={styles.contentWrapper} style={{ marginTop: '8rem' }}>
         <Dropdown />
         <JustExplore />
       </section>
     );
 
   return (
-    <>
+    <main style={{ marginTop: '8rem' }}>
       <Head>
         <title>ArConnect - Explore</title>
       </Head>
@@ -120,7 +120,7 @@ const Explore = () => {
         <Dropdown />
         <StoreAR />
       </section>
-    </>
+    </main>
   );
 };
 

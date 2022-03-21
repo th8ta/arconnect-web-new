@@ -1,12 +1,22 @@
 @import '/styles/mixins.scss';
 @import '/styles/partials/mobileNav.module.scss';
 
+@mixin ScrolledNav {
+  position: fixed;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .Nav {
-  z-index: 1;
+  top: 2rem;
+  left: 50%;
   width: 90%;
+  z-index: 1;
+  margin: auto;
   height: 5rem;
-  margin: 2rem auto;
-  position: relative;
+  position: fixed;
+  transform: translateX(-50%);
 
   background: #fff;
   border-radius: 32px;
@@ -144,4 +154,13 @@
       color: #fff;
     }
   }
+}
+
+.Scrolled {
+  @include ScrolledNav;
+}
+
+.DarkNavScrolled {
+  @include ScrolledNav;
+  background: rgba(255, 255, 255);
 }

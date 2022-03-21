@@ -72,7 +72,7 @@ const Security = () => {
         <link rel="shortcut icon" href="/logo256.png" />
       </Head>
 
-      <main className={styles.mainContainer}>
+      <main className={styles.mainContainer} style={{ marginTop: '8rem' }}>
         <section className={styles.landingSection}>
           <div>
             <h1>
