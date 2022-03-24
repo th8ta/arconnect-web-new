@@ -4,8 +4,12 @@
   color: #fff;
   height: auto;
   background: rgb(5, 5, 5);
-  margin-top: 12em;
-  @include DisplayFlex(row, center, space-between);
+  margin-top: 8em;
+  @include DisplayFlex(column, center, space-between);
+
+  @include responsive(tablet) {
+    @include DisplayFlex(row, center, space-between);
+  }
 
   .items {
     width: auto;

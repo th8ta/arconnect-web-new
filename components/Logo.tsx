@@ -3,11 +3,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
-interface Props {
-  path: string;
-}
-
-const LogoWrapper = styled.div<Props>`
+const LogoWrapper = styled.div`
   cursor: pointer;
   margin-left: 1rem;
   display: flex;
@@ -19,7 +15,7 @@ const LogoWrapper = styled.div<Props>`
     line-height: 17px;
     font-size: 1.125rem;
     margin-left: 0.5rem;
-    color: ${(props) => (props.path === '/security' ? '#fff' : '#000')};
+    color: #fff;
   }
 `;
 
@@ -27,7 +23,7 @@ const Logo = () => {
   const router = useRouter();
   console.log(router.pathname);
   return (
-    <LogoWrapper onClick={() => router.push('/')} path={router.pathname}>
+    <LogoWrapper onClick={() => router.push('/')}>
       <Image
         src="/assets/arconnect-logo.svg"
         alt="arconnect logo"
