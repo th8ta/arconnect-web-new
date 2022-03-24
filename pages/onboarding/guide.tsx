@@ -7,7 +7,7 @@ import styles from 'styles/views/onboarding/guide.module.scss';
 const Guide = () => {
   const { browserLink } = useGetBrowser();
   return (
-    <main style={{ marginTop: '8rem' }}>
+    <>
       <Head>
         <title>ArConnect - Guide</title>
       </Head>
@@ -34,7 +34,7 @@ const Guide = () => {
           <Button href={browserLink} text="I need ArConnect now" dark newTab />
         </div>
       </section>
-    </main>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from './Logo';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 CgClose;
 import { CgClose } from 'react-icons/cg';
@@ -12,7 +12,6 @@ import styles from 'styles/components/nav.module.scss';
 export default function Nav() {
   const router = useRouter(),
     [openNav, setOpenNav] = useState<boolean>(false),
-    [scrolled, setScrolled] = useState<boolean>(false),
     { browser, browserLink: storeLink } = useGetBrowser();
 
   const handleNavClick = () => {
@@ -33,27 +32,12 @@ export default function Nav() {
     </>
   );
 
-  const handleScroll = () =>
-    window.scrollY > 50 ? setScrolled(true) : setScrolled(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
-
   return (
     <>
       <nav
         className={
-          router.pathname === '/security' && scrolled
-            ? `${styles.Nav} ${styles.DarkNavScrolled}`
-            : router.pathname === '/security'
+          router.pathname === '/security'
             ? `${styles.Nav} ${styles.darkNav}`
-            : scrolled
-            ? `${styles.Nav} ${styles.Scrolled}`
             : styles.Nav
         }
       >

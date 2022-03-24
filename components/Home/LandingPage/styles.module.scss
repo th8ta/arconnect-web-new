@@ -14,7 +14,7 @@
       line-height: 1.2;
       text-align: center;
       word-wrap: break-word;
-      @include FluidFont(600, 3rem, 50);
+      @include FluidFont(800, 3rem, 50);
 
       @include responsive(desktop-small) {
         line-height: 1.2;
