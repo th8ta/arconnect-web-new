@@ -71,7 +71,10 @@ export default function Nav() {
 
         {router.pathname === '/' ? (
           <Link href={storeLink}>
-            <a className={styles.addToBrowsers} target="_blank">
+            <a
+              className={`${styles.addToBrowsers} ${styles.install}`}
+              target="_blank"
+            >
               Download ArConnect
             </a>
           </Link>
