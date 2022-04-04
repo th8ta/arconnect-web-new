@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
-      <Logo />
+      <Logo roleFooter />
       <div className={styles.items}>
         <ul>
           <li>

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 interface Props {
   path?: string;
+  roleFooter?: boolean;
 }
 
 const LogoWrapper = styled.div<Props>`
@@ -19,14 +20,19 @@ const LogoWrapper = styled.div<Props>`
     line-height: 17px;
     font-size: 1.125rem;
     margin-left: 0.5rem;
-    color: ${(props) => (props.path === '/security' ? '#fff' : '#000')};
+    color: ${(props) =>
+      props.path === '/security' ? '#fff' : props.roleFooter ? '#fff' : '#000'};
   }
 `;
 
-const Logo = () => {
+const Logo = ({ roleFooter }: { roleFooter?: boolean }) => {
   const router = useRouter();
   return (
-    <LogoWrapper onClick={() => router.push('/')} path={router.pathname}>
+    <LogoWrapper
+      onClick={() => router.push('/')}
+      path={router.pathname}
+      roleFooter={roleFooter}
+    >
       <Image
         src="/assets/arconnect-logo.svg"
         alt="arconnect logo"
