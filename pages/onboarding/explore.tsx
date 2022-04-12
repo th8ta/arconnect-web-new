@@ -25,7 +25,7 @@ const Explore = () => {
 
   const Dropdown = () => {
     const dropDownText = selected.storeTokens
-      ? 'Store your first AR tokens'
+      ? 'Store your first AR token'
       : selected.accessDapp
       ? 'Access a Dapp'
       : 'I just want to explore';
@@ -61,7 +61,7 @@ const Explore = () => {
             }}
             className={selected.storeTokens ? styles.active : ''}
           >
-            Store your first AR tokens
+            Store your first AR token
           </button>
           <button
             onClick={() => {

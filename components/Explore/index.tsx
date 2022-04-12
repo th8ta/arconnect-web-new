@@ -12,8 +12,8 @@ export const StoreAR = () => {
       <ExplorePage
         iconUrl="/assets/moneyBag.svg"
         altText="money bag emoji"
-        heading="Store you first AR tokens"
-        introParagraph="Please click the <span>Install ArConnect</span> button on this page to get ArConnect for your
+        heading="Store you first AR token"
+        introParagraph="Please click the <span>Download ArConnect</span> button on this page to get ArConnect for your
         browser if you haven’t already. If you have then let’s proceed!
         Complete the following actions step-by-step."
       />
@@ -37,7 +37,7 @@ export const AccessDapps = () => {
         altText="plug emoji"
         accessDapps
         heading="Access a Dapp"
-        introParagraph="Please click the <span>Install ArConnect</span> button on this page to get ArConnect for your browser if you haven’t already. If you have then let’s proceed!```
+        introParagraph="Please click the <span>Download ArConnect</span> button on this page to get ArConnect for your browser if you haven’t already. If you have then let’s proceed!```
       <br></br>
       
         ArConnect is the easiest way to access Dapps on Arweave, but you’ll need to have some AR tokens to complete most transactions

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from './Logo';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 CgClose;
@@ -9,9 +10,9 @@ import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/components/nav.module.scss';
 
 export default function Nav() {
-  const router = useRouter();
-  const [openNav, setOpenNav] = useState<boolean>(false);
-  const { browser, browserLink: storeLink } = useGetBrowser();
+  const router = useRouter(),
+    [openNav, setOpenNav] = useState<boolean>(false),
+    { browser, browserLink: storeLink } = useGetBrowser();
 
   const handleNavClick = () => {
     setOpenNav(false);
@@ -40,15 +41,7 @@ export default function Nav() {
             : styles.Nav
         }
       >
-        <div className={styles.logo} onClick={() => router.push('/')}>
-          <Image
-            src="/assets/arconnect-logo.svg"
-            alt="arconnect logo"
-            width={30}
-            height={30}
-          />
-          <p>ArConnect</p>
-        </div>
+        <Logo />
 
         <ul className={styles.navItems}>
           <NavItems />
@@ -78,7 +71,10 @@ export default function Nav() {
 
         {router.pathname === '/' ? (
           <Link href={storeLink}>
-            <a className={styles.addToBrowsers} target="_blank">
+            <a
+              className={`${styles.addToBrowsers} ${styles.install}`}
+              target="_blank"
+            >
               Download ArConnect
             </a>
           </Link>

@@ -2,32 +2,33 @@
 
 .footerContainer {
   color: #fff;
-  height: 25rem;
-  background: radial-gradient(
-    circle,
-    rgba(26, 0, 54, 1) 0%,
-    rgba(0, 0, 0, 1) 52%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  padding: 1rem;
-  gap: 5rem;
-  @include DisplayFlex(row, center, center);
+  height: auto;
+  background: rgb(5, 5, 5);
+  margin-top: 8em;
+  @include DisplayFlex(column, center, space-between);
 
-  div {
-    width: 15rem;
-    @include DisplayFlex(row, none, space-between);
+  @include responsive(tablet) {
+    @include DisplayFlex(row, center, space-between);
+  }
+
+  .items {
+    width: auto;
+    color: rgb(170, 170, 170);
+    padding-right: 1em;
+
+    & ul li :hover {
+      color: #fff;
+    }
 
     ul {
+      display: flex;
+      gap: 2em;
       list-style: none;
-
-      h4 {
-        @include FluidFont(700, 1.375rem, 0);
-      }
 
       li {
         margin: 1.5rem 0;
         cursor: pointer;
-        @include FluidFont(400, 1rem, 0);
+        @include FluidFont(400, 0.8em, 0);
       }
     }
   }

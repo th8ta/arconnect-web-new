@@ -1,12 +1,14 @@
 import Link from 'next/link';
+import Logo from '../components/Logo';
 import styles from 'styles/components/footer.module.scss';
+import styled from 'styled-components';
 
 const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
-      <div>
+      <Logo roleFooter />
+      <div className={styles.items}>
         <ul>
-          <h4>Resources</h4>
           <li>
             <Link href="https://docs.th8ta.org/arconnect">Docs</Link>
           </li>
@@ -19,9 +21,6 @@ const Footer = () => {
           <li>
             <Link href="https://arweave.org/">Arweave</Link>
           </li>
-        </ul>
-        <ul>
-          <h4>Legal</h4>
           <li>
             <Link href="https://github.com/th8ta/ArConnect/blob/development/LICENSE">
               License
