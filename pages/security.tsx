@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import DOMPurify from 'isomorphic-dompurify';
-
+import Footer from '@/components/Footer';
 import QandA from 'components/QandA';
 import useGetBrowser from 'hooks/useGetBrowser';
 import styles from 'styles/views/security.module.scss';
@@ -148,6 +148,8 @@ const Security = () => {
           </Link>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 };
